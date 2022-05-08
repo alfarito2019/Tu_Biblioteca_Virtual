@@ -94,19 +94,17 @@ class ListaEnlazada:
                 previo.colocarSiguiente(actual.traerSiguiente())
     
     
-def split(texto:str)->None:
+def split(texto:str):
     currentToken = ""
     mini_lista =   ListaEnlazada()
     for c in texto:
-        #print(c)
         
-        if c == "," :
+        if c == "|" :
             mini_lista.agregar( currentToken)  
             currentToken = ""
             c=""
         currentToken += c
         
-    
     return mini_lista
 
         

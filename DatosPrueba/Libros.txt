@@ -1,0 +1,151 @@
+Usuario| Autor| Título| Autoconclusivo/Bilogía/Trilogía/Saga| Genero| Formato(electrónico o físico)|Estado de lectura (leido/pendiente)|Prestado(Si/No)|
+CatCrio|AG Howard|Splintered|Trilogía Splintered (1)|Fantasía - Juvenil Romántica|Libro de Papel|Finalizado|No|
+CatCrio|AG Howard|Unhinged|Trilogía Splintered (2)|Fantasía - Juvenil Romántica	Libro de Papel|Finalizado|No|
+CatCrio|AG Howard|Ensnared|Trilogía Splintered (3)|Fantasía - Juvenil Romántica	Libro de Papel|Finalizado|No|
+CatCrio|AG Howard|Untamed|Trilogía Splintered (3.5)|Fantasía - Juvenil Romántica|Libro de Papel	Finalizado|No|
+CatCrio|Antoine de Saint-Exupéry|El principito|Autonclusivo|Literatura infantil - Fábula - Novela corta - Ficción especulativa|Libro de Papel|Finalizado|No|
+CatCrio|Benjamin Alire Sáenz|Aristóteles y Dante descubren los secretos del universo|Bilogía Aristóteles y Dante (2)|Ficción - Narrativa - Novela|Libro electrónico|Finalizado|No|
+CatCrio|Benjamin Alire Sáenz|Aristóteles y Dante se sumergen en las aguas del mundo|Bilogía Aristóteles y Dante (1)|Ficción - Narrativa - Novela|Libro de Papel	Finalizado|No|
+CatCrio|Brandon Sanderson|El imperio final|Trilogía Nacidos de la Bruma (1)|Fantasía|Libro de Papel|Finalizado|No|
+CatCrio|Brandon Sanderson|El pozo de la ascensión|Trilogía Nacidos de la Bruma (2)|Fantasía|Libro electrónico|Finalizado|No|
+CatCrio|Brandon Sanderson|El héroe de las eras|Trilogía Nacidos de la Bruma (3)|Fantasía|Libro de Papel|Finalizado|No|
+CatCrio|Brandon Sanderson|El camino de los reyes|Saga El Archivo de las Tormentas (1)|Fantasía épica|Libro de Papel|Finalizado|No|
+CatCrio|Brandon Sanderson|Palabras radiantes|Saga El Archivo de las Tormentas (2)|Fantasía épica|Libro de Papel|Finalizado|No|
+CatCrio|Brandon Sanderson|Danzante el filo|Saga El Archivo de las Tormentas (2.5)|Fantasía épica|Libro de Papel|Finalizado|No|
+CatCrio|Brandon Sanderson|Juramentada|Saga El Archivo de las Tormentas (3)|Fantasía épica|Libro de Papel|Finalizado|No|
+CatCrio|Brandon Sanderson|Esquirla del amanecer|Saga El Archivo de las Tormentas (3.5)|Fantasía épica|Libro de Papel|No|
+CatCrio|Brandon Sanderson|El ritmo de la guerra|Saga El Archivo de las Tormentas (4)|Fantasía épica|Libro de Papel|Pendiente|No|
+CatCrio|Carolina Andújar|Vampyr|Saga Carmina Nocturna (1)|Misterio- Ficción gótica- Ficción humorística- Romance paranormal|Libro de Papel|Finalizado|No|
+CatCrio|Cassandra Clare - Holly Black|La prueba de hierro|Saga Magisterium (1)|Ficción de aventuras|Libro de Papel|Finalizado|Si|
+CatCrio|Cassandra Clare - Holly Black|El guante de cobre|Saga Magisterium (2)|Ficción de aventuras|Libro de Papel|Finalizado|Si|
+CatCrio|Cassandra Clare - Holly Black|La llave de bronce|Saga Magisterium (3)|Ficción de aventuras|Libro de Papel|Finalizado|No|
+CatCrio|Cassandra Clare - Holly Black|La máscara de plata|Saga Magisterium (4)|Ficción de aventuras|Libro electrónico|Finalizado|No|
+CatCrio|Cassandra Clare - Holly Black|La torre de oro|Saga Magisterium (5)|Ficción de aventuras|Libro electrónico|Finalizado|No|
+CatCrio|Christopher Paolini|Eragon|Saga The Inheritance Cycle (1)|Fantasía|Libro de Papel|Finalizado|No|
+CatCrio|Christopher Paolini|Eldest|Saga The Inheritance Cycle (2)|Fantasía|Libro de Papel|Finalizado|No|
+CatCrio|Christopher Paolini|Brisingr|Saga The Inheritance Cycle (3)|Fantasía|Libro de Papel|Finalizado|No|
+CatCrio|Christopher Paolini|Legado|Saga The Inheritance Cycle (4)|Fantasía|Libro de Papel|Pendiente|No|
+CatCrio|Claudia Ramírez|El principe del sol|Trilogía El principe del sol (1)|Fantasía|Libro electrónico|Finalizado|No|
+CatCrio|Claudia Ramírez|La ladrona de la luna|Trilogía El principe del sol (2)|Fantasía|Libro de Papel|Finalizado|No|
+CatCrio|Cornelia Funke|Corazón de tinta|Trilogia Mundos de tinta (1)|Fantasía|Libro de Papel|Finalizado|No|
+Cornelia Funke|Inkdeath|Trilogia Mundos de tinta (3)|Fantasía	Libro de Papel|Pendiente|No|
+Cornelia Funke|The Thief Lord|Autonclusivo|Literatura infantil - Novela - Literatura fantástica|Libro de Papel|Finalizado|No|
+CatCrio|CS Lewis|El sobrino del mago|Saga Las crónicas de Narnia (1)|Fantasía|Libro de Papel|Finalizado|No|
+CatCrio|CS Lewis|El león la bruja y el armario|Saga Las crónicas de Narnia (2)|Fantasía|Libro de Papel|Finalizado|No|
+CatCrio|CS Lewis|El caballo y su niño|Saga Las crónicas de Narnia (3)|Fantasía|Libro de Papel|Finalizado|No|
+CatCrio|CS Lewis|El príncipe Caspian|Saga Las crónicas de Narnia (4)|Fantasía|Libro de Papel|Finalizado|No|
+CatCrio|CS Lewis|La travesía del Viajero del Alba|Saga Las crónicas de Narnia (5)|Fantasía|Libro de Papel|No|
+CatCrio|CS Lewis|La silla de plata|Saga Las crónicas de Narnia (6)|Fantasía|Libro de Papel|Finalizado|No|
+CatCrio|CS Lewis|La última batalla|Saga Las crónicas de Narnia (7)|Fantasía|Libro de Papel|Finalizado|No|
+CatCrio|Eoin Colfer|Artemis Fowl|Saga Artemis Fowl (1)|Ficción especulativa|Libro de Papel|Finalizado|No|
+CatCrio|Eoin Colfer|Encuentro en el Ártico |Saga Artemis Fowl (2)|Ficción especulativa|Libro electrónico|Finalizado|No|
+CatCrio|Eoin Colfer|El Cubo B|Saga Artemis Fowl (3)|Ficción especulativa|Libro electrónico|Finalizado|No|
+CatCrio|Eoin Colfer|La venganza de Opal|Saga Artemis Fowl (4)|Ficción especulativa|Libro electrónico|Finalizado|No|
+CatCrio|Eoin Colfer|La cuenta atrás|Saga Artemis Fowl (5)|Ficción especulativa|Libro de Papel|Finalizado|No|
+CatCrio|Eoin Colfer|Y su peor enemigo|Saga Artemis Fowl (6)|Ficción especulativa|Libro electrónico|Finalizado|No|
+CatCrio|Eoin Colfer|La hora de la verdad|Saga Artemis Fowl (7)|Ficción especulativa|Libro electrónico|Finalizado|No|
+CatCrio|Eoin Colfer|El último guardián|Saga Artemis Fowl (8)|Ficción especulativa|Libro electrónico|Finalizado|No|
+CatCrio|James Dashner|Correr o morir|Saga Maze Runner (1)|Distopía - Ciencia ficción|Libro de Papel|Finalizado|Si|
+CatCrio|James Dashner|La prueba de fuego|Saga Maze Runner (2)|Distopía - Ciencia ficción|Libro de Papel|Finalizado|Si|
+CatCrio|James Dashner|La cura mortal|Saga Maze Runner (3)|Distopía - Ciencia ficción|Libro electrónico|Finalizado|No|
+CatCrio|James Dashner|El juego infinito|Trilogía Saga Doctrina de la Mortalidad (1)|Ficción adulto joven - Novela -Ciencia ficción|Libro de Papel|Finalizado|No|
+CatCrio|James Dashner|Revolución|Trilogía Saga Doctrina de la Mortalidad (2)|Ficción adulto joven - Novela -Ciencia ficción|Libro de Papel|Finalizado|No|
+CatCrio|James Dashner|La batalla final|Trilogía Saga Doctrina de la Mortalidad (3)|Ficción adulto joven - Novela -Ciencia ficción|Libro de Papel|Finalizado|No|
+CatCrio|James Matthew Barrie|Peter Pan|Autoconclusivo|Fantasía|Libro de Papel|Finalizado|No|
+CatCrio|K Rowling|La priedra filosofal|Saga Harry Potter (1)|Fantasía|Libro de Papel|Finalizado|No|
+CatCrio|JK Rowling|La cámara de los secretos|Saga Harry Potter (2)|Fantasía|Libro de Papel|Finalizado|No|
+CatCrio|JK Rowling|El prisionero de askaban|Saga Harry Potter (3)|Fantasía|Libro de Papel|Finalizado|No|
+CatCrio|JK Rowling|El caliz de fuego|Saga Harry Potter (4)|Fantasía|Libro de Papel|Finalizado|No|
+CatCrio|JK Rowling|La orden del fenix|Saga Harry Potter (5)|Fantasía|Libro de Papel|Finalizado|No|
+CatCrio|JK Rowling|El principe mestizo|Saga Harry Potter (6)|Fantasía|Libro de Papel|Finalizado|No|
+CatCrio|JK Rowling|Las reliquias de la muerte|Saga Harry Potter (7)|Fantasía|Libro de Papel|Finalizado|No|
+CatCrio|Kami Garcia - Margaret Stohl|Hermosas criaturas|Saga Dieciséis lunas (1)|Novela - Ficción adulto joven - Novela rosa - Literatura fantástica|Libro de Papel|Finalizado|No|
+CatCrio|Kami Garcia - Margaret Stohl|Hermosa oscuridad|Saga Dieciséis lunas (2)|Novela - Ficción adulto joven - Novela rosa - Literatura fantástica|Libro electrónico|Finalizado|No|
+CatCrio|Kami Garcia - Margaret Stohl|Hermoso caos|Saga Dieciséis lunas (3)|Novela - Ficción adulto joven - Novela rosa - Literatura fantástica|Libro electrónico|Finalizado|No|
+CatCrio|Kami Garcia - Margaret Stohl|Hermoso final|Saga Dieciséis lunas (4)|Novela - Ficción adulto joven - Novela rosa - Literatura fantástica|Libro de Papel|Finalizado|No|
+CatCrio|Kiera Cass|La selección|Saga La selección (1)|Distopía - Ciencia ficción|Libro de Papel|Finalizado|No|
+CatCrio|Kiersten White|Hija de las tinieblas|Trilogía Hija de las tinieblas (1)|Literatura fantástica - Ucronía|Libro electrónico|Finalizado|No|
+CatCrio|Kiersten White|Renace de las sombras|Trilogía Hija de las tinieblas (2)|Literatura fantástica - Ucronía|Libro electrónico|Finalizado|No|
+CatCrio|Kiersten White|Bright we burn|Trilogía Hija de las tinieblas (3)|Literatura fantástica - Ucronía|Libro de Papel	Finalizado|No|
+CatCrio|Laini Taylor|Hija de humo y hueso|Trilogía Hija de humo y hueso (1)|Literatura fantástica - Novela rosa - Alta fantasía|Libro de Papel|Finalizado |No|
+CatCrio|Laini Taylor|Días de Sangre y Resplandor|Trilogía Hija de humo y hueso (2)|Literatura fantástica - Novela rosa - Alta fantasía|Libro electrónico|Finalizado|No|
+Laini Taylor|Sueños de Dioses y Monstruos|Trilogía Hija de humo y hueso (3)|Literatura fantástica - Novela rosa - Alta fantasía|Libro electrónico|Finalizado|No|
+CatCrio|Lewis Carroll|Alicia a través del espejo|Autonclusivo|Fantasía|Libro de Papel|Finalizado|No|
+CatCrio|Luc Besson|Arthur la venganza de maltazard|Saga Arthur y los Minimoys (2)|Fantasía|Libro de Papel|Pendiente|No|
+CatCrio|Lucy Maud Montgomery|Ana la de Tejas Verdes|Saga Green Gables (1)|Ficción|Libro de Papel|Finalizado|No|
+CatCrio|Lucy Maud Montgomery|Ana la de Avonlea|Saga Green Gables (2)|Ficción|Libro de Papel|Finalizado|No|
+CatCrio|Lucy Maud Montgomery|Ana la de la Isla|Saga Green Gables (3)|Ficción|Libro de Papel|Finalizado|No|
+CatCrio|Lucy Maud Montgomery|Ana la de Álamos Ventosos|Saga Green Gables (4)|Ficción|Libro electrónico|Finalizado|No|
+CatCrio|Lucy Maud Montgomery|Ana y la Casa de sus Sueños|Saga Green Gables (5)|Ficción|Libro electrónico|Finalizado|No|
+CatCrio|Lucy Maud Montgomery|Ana la de Ingleside|Saga Green Gables (6)|Ficción|Libro electrónico|Finalizado|No|
+CatCrio|Lucy Maud Montgomery|El valle del Arco Iris|Saga Green Gables (7)|Ficción|Libro electrónico|Finalizado|No|
+CatCrio|Lucy Maud Montgomery|Rilla la de Ingleside|Saga Green Gables (8)|Ficción|Libro electrónico|Pendiente|No|
+CatCrio|Luke Pearson|El rey de la montaña|Saga Hilda (6)|Ficción - Sobrentural|Libro de Papel|Finalizado|No|
+CatCrio|Maggie Stiefvater|La profecía del cuervo|Saga The raven cycle (1)|Ficción - Literatura fantástica - Fantasía urbana - literatura contemporánea|Libro de Papel|Finalizado|No|
+CatCrio|Maggie Stiefvater|Los saqueadores de sueños|Saga The raven cycle (2)|Ficción - Literatura fantástica - Fantasía urbana - literatura contemporánea|Libro electrónico|Finalizado|No|
+CatCrio|Maggie Stiefvater|El tercer durmiente|Saga The raven cycle (3)|Ficción - Literatura fantástica - Fantasía urbana - literatura contemporánea|Libro electrónico|Finalizado|No|
+CatCrio|Maggie Stiefvater|El rey cuervo|Saga The raven cycle (4)|Ficción - Literatura fantástica - Fantasía urbana - literatura contemporánea|Libro electrónico|Finalizado|No
+CatCrio|Marcus Zusak|La ladrona de libros|Autonclusivo|Novela historica|Libro de Papel|Finalizado|No|
+CatCrio|Miki Monticelli|El brujo de los vientos|Autonclusivo|Fantasía|Libro de Papel|Finalizado|No|
+CatCrio|Nancy Springer|El caso del marqués desaparecido|Saga Enola Holmes (1)|Crimen|Libro electrónico|Finalizado|No|
+CatCrio|Nancy Springer|El caso de la dama zurda|Saga Enola Holmes (2)|Crimen|Libro de Papel|Finalizado|No|
+CatCrio|Nancy Springer|El caso del enigma de los ramos de flores|Saga Enola Holmes (3)|Crimen|Libro de Papel|Finalizado|No
+CatCrio|Nancy Springer|The Case of the Cryptic Crinoline|Saga Enola Holmes (5)|Crimen|Libro electrónico|Finalizado|No|
+CatCrio|Nancy Springer|The Case of the Gypsy Goodbye|Saga Enola Holmes (6)|Crimen|Libro electrónico|Finalizado|No|
+CatCrio|Philip Pullman|La brújula dorada|Trilogía La materia oscura (1)|Literatura fantástica - Realismo mágico|Libro de Papel|Finalizado|No|
+CatCrio|Philip Pullman|La daga de plata|Trilogía La materia oscura (2)|Literatura fantástica - Realismo mágico|Libro de Papel|Finalizado|No|
+CatCrio|Philip Pullman|El catalejo lacado|Trilogía La materia oscura (3)|Literatura fantástica - Realismo mágico|Libro de Papel|Finalizado|No|
+CatCrio|Philip Pullman|La bella salvaje|Trilogía El Libro de la Oscuridad (1)|Literatura fantástica - Realismo mágico|Libro de Papel|Finalizado|No|
+CatCrio|Philip Pullman|La comunidad secreta|Trilogía El Libro de la Oscuridad (2)|Literatura fantástica - Realismo mágico|Libro de Papel|Finalizado|No|
+CatCrio|Philip Pullman|Lyra's Oxford|Trilogía La materia oscura (3.5)|Literatura fantástica - Realismo mágico|Libro de Papel|Finalizado|No|
+CatCrio|Philip Pullman|Serpentine|Trilogía El Libro de la Oscuridad (1.5)|Literatura fantástica - Realismo mágico|Libro de Papel|Finalizado|No|
+CatCrio|Pittacus Lore|Soy el número cuatro|Saga Los legados de lorien (1)|Ciencia Ficción - Aventura|Libro electrónico|Finalizado|No|
+CatCrio|Pittacus Lore|El poder de séis|Saga Los legados de lorien (2)|Ciencia Ficción - Aventura|Libro de Papel|Finalizado|No|
+CatCrio|Pittacus Lore|El ascenso de nueve|Saga Los legados de lorien (3)|Ciencia Ficción - Aventura|Libro electrónico|Finalizado|No|
+CatCrio|Pittacus Lore|La caída de cinco|Saga Los legados de lorien (4)|Ciencia Ficción - Aventura|Libro electrónico|Finalizado|No|
+CatCrio|Pittacus Lore|La venganza de siete|Saga Los legados de lorien (5)|Ciencia Ficción - Aventura|Libro electrónico|Finalizado|No|
+CatCrio|Pittacus Lore|El destino de diez|Saga Los legados de lorien (6)|Ciencia Ficción - Aventura|Libro electrónico|Finalizado|No|
+CatCrio|Pittacus Lore|Somos uno|Saga Los legados de lorien (7)|Ciencia Ficción - Aventura|Libro electrónico|Finalizado|No|
+CatCrio|Rick Riordan|El ladrón del rayo|Saga Los dioses del olimpo (1)|Fantasía|Libro de Papel|Finalizado|Si|
+CatCrio|Rick Riordan|El mar de los mounstros|Saga Los dioses del olimpo (2)|Fantasía|Libro de Papel|Finalizado|No|
+CatCrio|Rick Riordan|La maldición del titán|Saga Los dioses del olimpo (3)|Fantasía|Libro de Papel|Finalizado|No|
+CatCrio|Rick Riordan|La batalla de labertino|Saga Los dioses del olimpo (4)|Fantasía|Libro de Papel|Finalizado|No|
+CatCrio|Rick Riordan|El último héroe del olimpo|Saga Los dioses del olimpo (5)|Fantasía|Libro de Papel|Finalizado|No|
+CatCrio|Rick Riordan|El héroe perdido|Saga Los héroes del olimpo (1)|Fantasía|Libro de Papel|Finalizado|No|
+CatCrio|Rick Riordan|El hijo de neptuno|Saga Los héroes del olimpo (2)|Fantasía|Libro de Papel|Finalizado|Noa|
+CatCrio|Rick Riordan|La marca de atenea|Saga Los héroes del olimpo (3)|Fantasía|Libro de Papel|Finalizado|No|
+CatCrio|Rick Riordan|La casa de hades|Saga Los héroes del olimpo (4)|Fantasía|Libro de Papel|Finalizado|No|
+CatCrio|Rick Riordan|La sangre del olimpo|Saga Los héroes del olimpo (5)|Fantasía|Libro de Papel|Finalizado|No|
+CatCrio|Rick Riordan|El oráculo oculto|Saga La pruebas de apolo (1)|Fantasía|Libro de Papel|Finalizado|No|
+CatCrio|Rick Riordan|La profecía oscura|Saga La pruebas de apolo (2)|Fantasía|Libro de Papel|Finalizado|No|
+CatCrio|Rick Riordan|Laberinto en llamas|Saga La pruebas de apolo (3)|Fantasía|Libro de Papel|Finalizado|No|
+CatCrio|Rick Riordan|La tumba del tirano|Saga La pruebas de apolo (4)|Fantasía|Libro de Papel|Finalizado|No|
+CatCrio|Rick Riordan|La torre de nerón|Saga La pruebas de apolo (5)|Fantasía|Libro de Papel|Finalizado|No|
+CatCrio|Rick Riordan|La piramide roja|Trilogía Las crónicas de Kane (1)|Fantasía|Libro de Papel|Finalizado|No|
+CatCrio|Rick Riordan|El trono de fuego|Trilogía Las crónicas de Kane (2)|Fantasía|Libro de Papel|Finalizado|No|
+CatCrio|Rick Riordan|La sombra de la serpiente|Trilogía Las crónicas de Kane (3)|Fantasía|Libro de Papel|Finalizado|No|
+CatCrio|Rick Riordan|La espada del tiempo|Trilogía Magnus Chase y los dioses de Asgard (1)|Fantasía|Libro de Papel|Finalizado|No|
+CatCrio|Rick Riordan|El martillo de thor|Trilogía Magnus Chase y los dioses de Asgard (2)|Fantasía|Libro de Papel|Finalizado|No|
+CatCrio|Rick Riordan|El barco de los muertos|Trilogía Magnus Chase y los dioses de Asgard (3)|Fantasía|Libro de Papel|Finalizado|No|
+CatCrio|Suzanne Collins|Los juegos del hambre|Trilogia Los juegos del hambre (1)|Ciencia Ficción - Distopia|Libro de Papel|Finalizado|No|
+CatCrio|Suzanne Collins|En llamas|Trilogia Los juegos del hambre (2)|Ciencia Ficción - Distopia|Libro de Papel|Finalizado|No|
+CatCrio|Suzanne Collins|Sinsajo|Trilogia Los juegos del hambre (3)|Ciencia Ficción - Distopia|Libro de Papel|Finalizado|No|
+CatCrio|TJ Klune|La canción del lobo|Saga Green creek (1)|Fantasía|Libro de Papel|Finalizado|No|
+CatCrio|TJ Klune|La canción del cuervo|Saga Green creek (2)|Fantasía|Libro de Papel|Finalizado|No|
+CatCrio|TJ Klune|La cación del corazón|Saga Green creek (3)|Fantasía|Libro de Papel|Finalizado|No|
+CatCrio|TJ Klune|La canción del hermano|Saga Green creek (4)|Fantasía|Libro electrónico|Finalizado|No|
+CatCrio|Veronica Roth|Divergente|Trilogía Divergente (1)|Ciencia Ficción - Distopia|Libro de Papel|Finalizado|No|
+CatCrio|Veronica Roth|Insurgente|Trilogía Divergente (1)|Ciencia Ficción - Distopia|Libro de Papel|Finalizado|No|
+CatCrio|Veronica Roth|Leal|Trilogía Divergente (1)|Ciencia Ficción - Distopia|Libro de Papel|Finalizado|No|
+CatCrio|Wendy Xu - Suzanne Walker|Mooncake|Autonclusivo|Fantasía|Libro de Papel	Finalizado|No|
+Juan|Ernest Cline|Ready player one|Bilogia Ready player one (1)|Ciencia ficción|Libro de Papel|Finalizado|No|
+Juan|Ricardo Alcántara|Gustavo y los miedos| Autoconclusivo|Infantil|Libro de Papel|Finalizado|No|
+Juan|Íñigo Javaloyes|Autoconclusivo|Autoconclusivo|Infantil|Libro de Papel|Finalizado|No|
+Juan|Margarita Mainé|Autoconclusivo|Infantil|Libro de Papel|Finalizado|No|
+Juan|Emma Lucía Ardila Jaramillo| Luisa juegapalabras|Autoconclusivo|Infantil|Libro de Papel|Finalizado|No|
+Juan|Carlos Peramo|La bicicleta es mía|Autoconclusivo|Infantil|Libro de Papel|Finalizado|No|
+Juan|Mireya Madrid-Malo|Doce cuentos para un sueño|Autoconclusivo|Infantil|Libro de Papel|Finalizado|No|
+Juan|Jorge Antonio García Pérez| Amor entre letras|Autoconclusivo|Infantil|Libro de Papel|Finalizado|No|
+Juan|Edgar Allan Poe| La carta robada y otros cuentos|Autoconclusivo|Infantil|Libro de Papel|Finalizado|No|
+jose|Julio Verne|20000 leguas de viaje submarino|Autoconclusivo|Novela|Libro de Papel|finalizado|no|
+jose|Carlos Julio Luque|Estructuras análogas a los números reales|Autoconclusivo|Libro academico|Libro de Papel|finalizado|si|

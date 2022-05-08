@@ -1,2 +1,0 @@
-jose,1234,
-Thomas,Rata inmunda,

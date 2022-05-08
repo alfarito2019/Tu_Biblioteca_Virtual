@@ -9,13 +9,17 @@ if __name__ == '__main__':
         variable  = int(input().strip())
         if variable ==1: #escogio registrarse
                 print("Registrandose")
-                username = input("Ingrese su usario: ")
+                username = input("Ingrese su usuario: ")
                 password = input("Ingrese su contraseña: ")
                 user1 = Usuario.usuario(username, password)
-                if user1.registro() == False:
+
+                if not user1.registro():
                         print("Ya te encuentras registrado")
                 else:
                         print("Se registro satisfactoriamente")
+                        user1.online=True
+                        menu=Menu.Menu(user1)
+                        menu.mostrarMenu()
                 
         else: #Escogió iniciar sesion
                 username = input("Ingrese su usario: ")
@@ -25,7 +29,8 @@ if __name__ == '__main__':
                 
                 if inicio:
                         print("Se inició sesión correctamente")
-                        Menu.Menu.mostrarMenu()
+                        menu=Menu.Menu(user1)
+                        menu.mostrarMenu()
 
                 else:
                         print("Usuario o contraseña incorrecta")

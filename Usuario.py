@@ -16,14 +16,13 @@ class usuario():
     #Registrarse
 
     def registro(self)->bool:
-        baseUsuarios=BaseDatos.BD()
+        baseUsuarios=BaseDatos.BD(self)
         baseUsuarios.descargarUsuarios()
         listaUsuarios= baseUsuarios.getUsuarios()
         confirmacion=True
         recorrido:estructuras.Nodo =listaUsuarios.cabeza
         while recorrido!=None:
             minilista:estructuras.ListaEnlazada=recorrido.verDato()
-            
             
             if minilista.cabeza.dato==self.username:
                 confirmacion=False
@@ -39,7 +38,7 @@ class usuario():
 
     #iniciar Sesion 
     def inicioSesion(self) ->bool:
-        baseUsuarios=BaseDatos.BD()
+        baseUsuarios=BaseDatos.BD(self)
         baseUsuarios.descargarUsuarios()
         listaUsuarios= baseUsuarios.getUsuarios()
         confirmacion=False
@@ -52,6 +51,7 @@ class usuario():
                     confirmacion=True
                     self.online=True
             recorrido=recorrido.siguiente
+        
 
         return confirmacion
     def salirSesion(self)->bool:
@@ -62,11 +62,8 @@ class usuario():
         else:
             return False
 
-    def __str__(self) -> str:
-        if self.online:
-            estado = "Online"
-        else:
-            estado = "Offline"
-        return f"Holaa, soy {self.usuario} y estoy {estado}"
+    
+    def nombreUsuario(self):
+        return str(self.username)
 
 
