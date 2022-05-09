@@ -84,12 +84,13 @@ class Menu:
         print("1. Nombre libro")
         print("2. Autor")
         desicion=int(input().strip())
+        confirmacion=False
         if desicion == 1:
             nombre_dado=input("¿Que nombre de libro busca? ")
             inicio = time.perf_counter()
             
             recorrido:estructuras.Nodo =listaLibros.cabeza
-            confirmacion=False
+            
             contador=0
             while recorrido!=None:
                 
@@ -114,15 +115,10 @@ class Menu:
                 recorrido=recorrido.siguiente
                 final  = time.perf_counter()
                 print(final - inicio )     
-
-        if not confirmacion:
-                print("Busqueda no encontrada")
-                final  = time.perf_counter()
-                print(final - inicio )     
-           
-
-
-
+            if not confirmacion:
+                    print("Busqueda no encontrada")
+                    final  = time.perf_counter()
+                    print(final - inicio )     
         elif desicion == 2:
             autor_dado=input("¿Que autor busca? ")
             inicio = time.perf_counter()
@@ -279,8 +275,7 @@ class Menu:
 
         
       
-    def actualizarLibro(self):
-        
+    def actualizarLibro(self):  
         titulo=input("Que libro desea actualizar? ")
         estado=input("El libro está prestado? (1)Si, (2)No: ")
         inicio = time.perf_counter()

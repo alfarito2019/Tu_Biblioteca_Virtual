@@ -294,7 +294,6 @@ Usuario13|autor293|libro293|Autoconclusivo|Libro academico|Libro de Papel|finali
 Usuario13|autor294|libro294|Autoconclusivo|Libro academico|Libro de Papel|finalizado|si|
 Usuario13|autor295|libro295|Autoconclusivo|Libro academico|Libro de Papel|finalizado|si|
 Usuario13|autor296|libro296|Autoconclusivo|Libro academico|Libro de Papel|finalizado|si|
-Usuario13|autor297|libro297|Autoconclusivo|Libro academico|Libro de Papel|finalizado|si|
 Usuario13|autor298|libro298|Autoconclusivo|Libro academico|Libro de Papel|finalizado|si|
-Usuario13|autor299|libro299|Autoconclusivo|Libro academico|Libro de Papel|finalizado|si|
+Usuario13|autor299|libro299|Autoconclusivo|Libro academico|Libro de Papel|finalizado|no|
 Usuario13|autor300|libro300|Autoconclusivo|Libro academico|Libro de Papel|finalizado|si|

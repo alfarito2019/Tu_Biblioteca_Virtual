@@ -202,7 +202,7 @@ Usuario13|autor201|libro201|Autoconclusivo|Libro academico|Libro de Papel|finali
 Usuario13|autor202|libro202|Autoconclusivo|Libro academico|Libro de Papel|finalizado|si|
 Usuario13|autor203|libro203|Autoconclusivo|Libro academico|Libro de Papel|finalizado|si|
 Usuario13|autor204|libro204|Autoconclusivo|Libro academico|Libro de Papel|finalizado|si|
-Usuario13|autor205|libro205|Autoconclusivo|Libro academico|Libro de Papel|finalizado|si|
+Usuario13|autor205|libro205|Autoconclusivo|Libro academico|Libro de Papel|finalizado|no|
 Usuario13|autor206|libro206|Autoconclusivo|Libro academico|Libro de Papel|finalizado|si|
 Usuario13|autor207|libro207|Autoconclusivo|Libro academico|Libro de Papel|finalizado|si|
 Usuario13|autor208|libro208|Autoconclusivo|Libro academico|Libro de Papel|finalizado|si|

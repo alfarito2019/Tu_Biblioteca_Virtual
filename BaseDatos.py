@@ -10,7 +10,7 @@ class BD():
         
 
     def descargarUsuarios(self)-> None:
-        f = open ('DatosPrueba/PruebaUsuarios150.txt',mode='r', encoding='utf8')
+        f = open ('DatosPrueba/PruebaUsuarios1millon.txt',mode='r', encoding='utf8')
         while(True):
             #leer la siguiente linea
             linea = f.readline()
@@ -24,7 +24,7 @@ class BD():
         
         
     def cargarUsuarios(self,username,password)-> bool:    
-        f = open ('DatosPrueba/PruebaUsuarios150.txt',mode='w', encoding='utf8')
+        f = open ('DatosPrueba/PruebaUsuarios1millon.txt',mode='w', encoding='utf8')
         f.write(username,password)        
         f.close()
 
@@ -32,16 +32,16 @@ class BD():
         return self.base_usuarios
 
     def appendUsuarios(self, username, password)->bool:
-        f = open ('DatosPrueba/PruebaUsuarios150.txt',mode='w', encoding='utf8')
+        f = open ('DatosPrueba/PruebaUsuarios1millon.txt',mode='w', encoding='utf8')
         f.write(username+"|"+password+"|\n")
         f.close()
 
     def borrarUsuario(self):
         # Borrar libros del usuario
-        fr = open('DatosPrueba/PruebaLibros150.txt',mode='r', encoding='utf8')
+        fr = open('DatosPrueba/PruebaLibros1millon.txt',mode='r', encoding='utf8')
         lineas = fr.readlines()
         fr.close()
-        f = open('DatosPrueba/PruebaLibros150.txt',mode='w', encoding='utf8')
+        f = open('DatosPrueba/PruebaLibros1millon.txt',mode='w', encoding='utf8')
         for linea in lineas:
             infoLibro = estructuras.split(linea)
             if infoLibro.cabeza.verDato() != self.usuario.nombreUsuario():
@@ -50,10 +50,10 @@ class BD():
 
         # Borrar usuario
         usuarioEncontrado = False
-        fr = open('DatosPrueba/PruebaUsuarios150.txt',mode='r', encoding='utf8')
+        fr = open('DatosPrueba/PruebaUsuarios1millon.txt',mode='r', encoding='utf8')
         lineas = fr.readlines()
         fr.close()
-        f = open('DatosPrueba/PruebaUsuarios150.txt',mode='w', encoding='utf8')
+        f = open('DatosPrueba/PruebaUsuarios1millon.txt',mode='w', encoding='utf8')
         for linea in lineas:
             infoUsuarios = estructuras.split(linea)
             if infoUsuarios.cabeza.verDato() != self.usuario.nombreUsuario():
@@ -70,7 +70,7 @@ class BD():
 
     def descargarLibros(self)-> None:
         
-        f = open ('DatosPrueba/PruebaLibros150.txt', mode='r', encoding='utf-8')
+        f = open ('DatosPrueba/PruebaLibros1millon.txt', mode='r', encoding='utf-8')
         while(True):
             #leer la siguiente linea
             linea = f.readline()
@@ -83,10 +83,6 @@ class BD():
         f.close()
         
         
-    def cargarLibros(self,username,password)-> bool:    
-        f = open ('DatosPrueba/PruebaLibros150.txt',mode='w', encoding='utf8')
-        f.write(username,password)        
-        f.close()
 
     def getLibros(self)-> estructuras.ListaEnlazada:
         return self.base_libros 
@@ -95,16 +91,16 @@ class BD():
     def appendLibros(self,autor,titlulo,extension,genero,formato,estadodelectura,prestado)->bool:
         
         userName = self.usuario.nombreUsuario()
-        f = open ('DatosPrueba/PruebaLibros150.txt',mode='a', encoding='utf8')
+        f = open ('DatosPrueba/PruebaLibros1millon.txt',mode='a', encoding='utf8')
         f.write("{a}|{b}|{c}|{d}|{e}|{f}|{g}|{h}|".format(a=userName,b=autor,c=titlulo,d=extension,e=genero,f=formato,g=estadodelectura,h=prestado)+"\n")
         f.close()   
 
     def actualizarBaseLibro(self,titulo,estado):
         libroEncontrado = False
-        fr = open('DatosPrueba/PruebaLibros150.txt',mode='r', encoding='utf8')
+        fr = open('DatosPrueba/PruebaLibros1millon.txt',mode='r', encoding='utf8')
         lineas = fr.readlines()
         fr.close()
-        f = open('DatosPrueba/PruebaLibros150.txt',mode='w', encoding='utf8')
+        f = open('DatosPrueba/PruebaLibros1millon.txt',mode='w', encoding='utf8')
         for linea in lineas:
             infoLibro = estructuras.split(linea)
             tituloActual:str = infoLibro.cabeza.traerSiguiente().traerSiguiente().verDato()
@@ -134,10 +130,10 @@ class BD():
 
     def borrarLibro(self,libroBorrado):
         libroEncontrado = False
-        fr = open('DatosPrueba/PruebaLibros150.txt',mode='r', encoding='utf8')
+        fr = open('DatosPrueba/PruebaLibros1millon.txt',mode='r', encoding='utf8')
         lineas = fr.readlines()
         fr.close()
-        f = open('DatosPrueba/PruebaLibros150.txt',mode='w', encoding='utf8')
+        f = open('DatosPrueba/PruebaLibros1millon.txt',mode='w', encoding='utf8')
         for linea in lineas:
             infoLibro = estructuras.split(linea)
             titulo:str = infoLibro.cabeza.traerSiguiente().traerSiguiente().verDato()

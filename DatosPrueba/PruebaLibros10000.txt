@@ -9996,5 +9996,4 @@ Usuario13|autor9995|libro9995|Autoconclusivo|Libro academico|Libro de Papel|fina
 Usuario13|autor9996|libro9996|Autoconclusivo|Libro academico|Libro de Papel|finalizado|si|
 Usuario13|autor9997|libro9997|Autoconclusivo|Libro academico|Libro de Papel|finalizado|si|
 Usuario13|autor9998|libro9998|Autoconclusivo|Libro academico|Libro de Papel|finalizado|si|
-Usuario13|autor9999|libro9999|Autoconclusivo|Libro academico|Libro de Papel|finalizado|si|
 Usuario13|autor10000|libro10000|Autoconclusivo|Libro academico|Libro de Papel|finalizado|si|
