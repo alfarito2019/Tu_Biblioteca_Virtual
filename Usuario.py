@@ -25,7 +25,7 @@ class usuario():
         while recorrido!=None:
             minilista:estructuras.ListaEnlazada=recorrido.verDato()
             
-            if minilista.cabeza.dato==self.username:
+            if minilista.cabeza.verDato()==self.username:
                 confirmacion=False
                 break
             recorrido=recorrido.siguiente

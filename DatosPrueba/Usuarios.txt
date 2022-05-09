@@ -1,4 +1,3 @@
-Thomas|Rata inmunda|
 CatCrio|Luffy|
 Wilches|Gansito Asesino|
 Allek|Chopper|
@@ -148,3 +147,4 @@ Usuario139|contraseña139
 Usuario140|contraseña140
 Usuario141|contraseña141
 Usuario142|contraseña142
+feliz|feliz|
