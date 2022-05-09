@@ -1,6 +1,6 @@
 
 import estructuras,Menu
-
+#import timeort time
 import Usuario
 if __name__ == '__main__':
         print("Esocoja una opcion ")

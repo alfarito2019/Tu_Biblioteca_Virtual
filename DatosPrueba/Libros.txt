@@ -28,8 +28,8 @@ CatCrio|Christopher Paolini|Legado|Saga The Inheritance Cycle (4)|Fantasía|Libr
 CatCrio|Claudia Ramírez|El principe del sol|Trilogía El principe del sol (1)|Fantasía|Libro electrónico|Finalizado|No|
 CatCrio|Claudia Ramírez|La ladrona de la luna|Trilogía El principe del sol (2)|Fantasía|Libro de Papel|Finalizado|No|
 CatCrio|Cornelia Funke|Corazón de tinta|Trilogia Mundos de tinta (1)|Fantasía|Libro de Papel|Finalizado|No|
-Cornelia Funke|Inkdeath|Trilogia Mundos de tinta (3)|Fantasía	Libro de Papel|Pendiente|No|
-Cornelia Funke|The Thief Lord|Autonclusivo|Literatura infantil - Novela - Literatura fantástica|Libro de Papel|Finalizado|No|
+CatCrio|Cornelia Funke|Inkdeath|Trilogia Mundos de tinta (3)|Fantasía	Libro de Papel|Pendiente|No|
+CatCrio|Cornelia Funke|The Thief Lord|Autonclusivo|Literatura infantil - Novela - Literatura fantástica|Libro de Papel|Finalizado|No|
 CatCrio|CS Lewis|El sobrino del mago|Saga Las crónicas de Narnia (1)|Fantasía|Libro de Papel|Finalizado|No|
 CatCrio|CS Lewis|El león la bruja y el armario|Saga Las crónicas de Narnia (2)|Fantasía|Libro de Papel|Finalizado|No|
 CatCrio|CS Lewis|El caballo y su niño|Saga Las crónicas de Narnia (3)|Fantasía|Libro de Papel|Finalizado|No|
@@ -69,7 +69,7 @@ CatCrio|Kiersten White|Renace de las sombras|Trilogía Hija de las tinieblas (2)
 CatCrio|Kiersten White|Bright we burn|Trilogía Hija de las tinieblas (3)|Literatura fantástica - Ucronía|Libro de Papel	Finalizado|No|
 CatCrio|Laini Taylor|Hija de humo y hueso|Trilogía Hija de humo y hueso (1)|Literatura fantástica - Novela rosa - Alta fantasía|Libro de Papel|Finalizado |No|
 CatCrio|Laini Taylor|Días de Sangre y Resplandor|Trilogía Hija de humo y hueso (2)|Literatura fantástica - Novela rosa - Alta fantasía|Libro electrónico|Finalizado|No|
-Laini Taylor|Sueños de Dioses y Monstruos|Trilogía Hija de humo y hueso (3)|Literatura fantástica - Novela rosa - Alta fantasía|Libro electrónico|Finalizado|No|
+CatCrio|Laini Taylor|Sueños de Dioses y Monstruos|Trilogía Hija de humo y hueso (3)|Literatura fantástica - Novela rosa - Alta fantasía|Libro electrónico|Finalizado|No|
 CatCrio|Lewis Carroll|Alicia a través del espejo|Autonclusivo|Fantasía|Libro de Papel|Finalizado|No|
 CatCrio|Luc Besson|Arthur la venganza de maltazard|Saga Arthur y los Minimoys (2)|Fantasía|Libro de Papel|Pendiente|No|
 CatCrio|Lucy Maud Montgomery|Ana la de Tejas Verdes|Saga Green Gables (1)|Ficción|Libro de Papel|Finalizado|No|

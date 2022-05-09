@@ -4,7 +4,7 @@ T = TypeVar("T", covariant=False, contravariant=False)
 
 class Nodo:
     # Constructor
-    def __init__(self,datoN: Optional[T])->None:
+    def __init__(self,datoN)->None:
         self.dato = datoN
         self.siguiente = None
 

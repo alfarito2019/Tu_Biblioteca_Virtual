@@ -1,4 +1,5 @@
 import estructuras,BaseDatos,Usuario
+import time
 
 class Menu:
     decision=0
@@ -29,19 +30,20 @@ class Menu:
         elif desicion == 3:
             menu.eliminarLibro()
         elif desicion == 4:
-            Menu.actualizarLibro()
+            menu.actualizarLibro()
         elif desicion == 5:
             self.usuario.salirSesion()
-            print("Hasta la proxima :)"+ self.usuario.username)
+            print("Hasta la proxima :) "+ self.usuario.username)
         elif desicion == 6:
             self.usuario.salirSesion()
-            print("Hasta la proxima :)"+ self.usuario.username)
+            print("Hasta la proxima :) "+ self.usuario.username)
         elif desicion == 0:
             menu.eliminarUsuario()
         else:
             print("\nDebe elegir una de las opciones enumeradas\n")
 
     def mostrarLibros(self)->None:
+        
         baseLibros=BaseDatos.BD(self.usuario)
         baseLibros.descargarLibros()
         listaLibros= baseLibros.getLibros()
@@ -65,14 +67,16 @@ class Menu:
         desicion=int(input().strip())
         menu=Menu(self.usuario)
         if desicion == 1:
+            
             menu.buscarLibro()
         elif desicion == 2:
             self.usuario.salirSesion()
             print("Hasta la proxima :)"+ self.usuario.username)
-            
+        
     
 ##Configurar metodo para agregar busqueda de libros
     def buscarLibro(self)->None:
+        inicio = time.perf_counter()
         baseLibros=BaseDatos.BD(self.usuario)
         baseLibros.descargarLibros()
         listaLibros= baseLibros.getLibros()
@@ -82,10 +86,13 @@ class Menu:
         desicion=int(input().strip())
         if desicion == 1:
             nombre_dado=input("¿Que nombre de libro busca? ")
+            inicio = time.perf_counter()
+            
             recorrido:estructuras.Nodo =listaLibros.cabeza
             confirmacion=False
             contador=0
             while recorrido!=None:
+                
                 libro:estructuras.ListaEnlazada=recorrido.verDato()
                 usuario=libro.cabeza.verDato()
                 nombre_libro:str=libro.cabeza.siguiente.siguiente.verDato()
@@ -94,20 +101,31 @@ class Menu:
                     contador+=1
                     if contador==1:
                         print("Autor| Título| Autoconclusivo/Bilogía/Trilogía/Saga| Genero| Formato(electrónico o físico)|Estado de lectura (leido/pendiente)|Prestado(Si/No)|")
+                        
+
                     recorrido2:estructuras.Nodo =libro.cabeza.siguiente
+                    
                     while recorrido2!=None:
                         
                         print(recorrido2.verDato(),end="|")
                         recorrido2=recorrido2.siguiente
                     print("")
-                
+
                 recorrido=recorrido.siguiente
-            if not confirmacion:
+                final  = time.perf_counter()
+                print(final - inicio )     
+
+        if not confirmacion:
                 print("Busqueda no encontrada")
+                final  = time.perf_counter()
+                print(final - inicio )     
+           
+
 
 
         elif desicion == 2:
             autor_dado=input("¿Que autor busca? ")
+            inicio = time.perf_counter()
             recorrido:estructuras.Nodo =listaLibros.cabeza
             confirmacion=False
             contador=0
@@ -129,10 +147,13 @@ class Menu:
                         recorrido2=recorrido2.siguiente
                     print("")
                 recorrido=recorrido.siguiente
+                final  = time.perf_counter()
+                print(final - inicio )
             if not confirmacion:
                 print("Busqueda no encontrada")
+                final  = time.perf_counter()
+                print(final - inicio )
 
-        
         
     
     def agregarLibros(self):
@@ -236,25 +257,70 @@ class Menu:
         print("\n¿Prestaste tu libro? ")
         prestado = input("¿si o no? ") #escoger
         while (prestado != "si" and prestado!= "no" ): 
-         print ("escoge una opcion valida")
-         prestado = input("¿si o no?") #escoger
+            print ("escoge una opcion valida")
+            prestado = input("¿si o no?") #escoger
 
-         
+        inicio = time.perf_counter() 
         baseLibros=BaseDatos.BD(self.usuario)
         baseLibros.appendLibros(autor,titlulo,extension,genero,formato,estadodeLectura,prestado)
+
         print("\n-- Has agregado un nuevo libro a tu colección! --")
-        
+        final  = time.perf_counter()
+        print(final - inicio )
+
     
     def eliminarLibro(self):
         libroBorrado = input("Digita el nombre del libro que deseas borrar: \n")
+        inicio = time.perf_counter()
         baseLibros=BaseDatos.BD(self.usuario)
         baseLibros.borrarLibro(libroBorrado)
-        
-        
-    @staticmethod    
-    def actualizarLibro(self):
-        pass
+        final  = time.perf_counter()
+        print(final - inicio )
 
-    def eliiminarUsuario(self):
-        pass
         
+      
+    def actualizarLibro(self):
+        
+        titulo=input("Que libro desea actualizar? ")
+        estado=input("El libro está prestado? (1)Si, (2)No: ")
+        inicio = time.perf_counter()
+        if estado == "1":
+            estado = "si"
+        elif estado == "2":
+            estado = "no"
+        else:
+            print("Debe elegir una opción valida")
+            while estado != "1" and estado != "2":
+                estado=input("El libro está prestado? (1)Si, (2)No: ")
+        baseLibros=BaseDatos.BD(self.usuario)
+        baseLibros.actualizarBaseLibro(titulo,estado)
+        final  = time.perf_counter()
+        print(final - inicio )
+        
+        
+
+    def eliminarUsuario(self):
+        print("¿Desea eliminar su usuario? \nEscoja una opcion valida: ")
+        eliminar = input("¿si o no? \n")
+        if eliminar == "si":
+            username = input("Ingrese su nombre de usario: ")
+            password = input("Ingrese su contraseña: ")  
+            inicio = time.perf_counter()
+            user1 = Usuario.usuario(username, password)            
+            inicio=user1.inicioSesion()
+
+            if inicio:
+                print(".\n.\n.")
+                baseUsuario=BaseDatos.BD(self.usuario)
+                baseUsuario.borrarUsuario()
+                inicio = time.perf_counter()
+
+            else:
+                print("El usuario o contraseña no coinciden. ")
+        
+        else:
+            print("Entendido. ")
+        
+        pass
+        final  = time.perf_counter()
+        print(final - inicio )
