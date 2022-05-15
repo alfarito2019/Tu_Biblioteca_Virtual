@@ -1,7 +1,11 @@
 
-import estructuras,Menu
+
+import Menu
+import estructuraPila
 #import timeort time
 import Usuario
+
+
 if __name__ == '__main__':
         print("Esocoja una opcion ")
         print("1.Registrarse")
