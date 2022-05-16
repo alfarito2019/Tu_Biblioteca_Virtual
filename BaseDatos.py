@@ -145,7 +145,7 @@ class BD():
                 if estado==1:
                     estado="finalizado"
                 while(recorrido!=None):
-                    if recorrido.verDato()=="pendiente" or  recorrido.verDato()=="Pendiente" :
+                    if recorrido.verDato().lower()=="pendiente" :
                         escrito+=estado+"|"
                     else:
                         escrito+=recorrido.verDato()+"|"

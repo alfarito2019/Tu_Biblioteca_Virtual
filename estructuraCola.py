@@ -42,4 +42,4 @@ class Cola:
     def verDequeue(self):
         if self.colaVacia():
             return False
-        return  self.cola(0)
+        return  self.cola[0]

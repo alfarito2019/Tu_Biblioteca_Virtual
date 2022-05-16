@@ -14,8 +14,7 @@ CatCrio|Brandon Sanderson|Palabras radiantes|Saga El Archivo de las Tormentas (2
 CatCrio|Brandon Sanderson|Danzante el filo|Saga El Archivo de las Tormentas (2.5)|Fantasía épica|Libro de Papel|Finalizado|No|
 CatCrio|Brandon Sanderson|Juramentada|Saga El Archivo de las Tormentas (3)|Fantasía épica|Libro de Papel|Finalizado|No|
 CatCrio|Brandon Sanderson|Esquirla del amanecer|Saga El Archivo de las Tormentas (3.5)|Fantasía épica|Libro de Papel|No|
-CatCrio|Brandon Sanderson|El ritmo de la guerra|Saga El Archivo de las Tormentas (4)|Fantasía épica|Libro de Papel|Pendiente|No|
-CatCrio|Carolina Andújar|Vampyr|Saga Carmina Nocturna (1)|Misterio- Ficción gótica- Ficción humorística- Romance paranormal|Libro de Papel|Finalizado|No|
+CatCrio|Brandon Sanderson|El ritmo de la guerra|Saga El Archivo de las Tormentas (4)|Fantasía épica|Libro de Papel|finalizado|No|CatCrio|Carolina Andújar|Vampyr|Saga Carmina Nocturna (1)|Misterio- Ficción gótica- Ficción humorística- Romance paranormal|Libro de Papel|Finalizado|No|
 CatCrio|Cassandra Clare - Holly Black|La prueba de hierro|Saga Magisterium (1)|Ficción de aventuras|Libro de Papel|Finalizado|Si|
 CatCrio|Cassandra Clare - Holly Black|El guante de cobre|Saga Magisterium (2)|Ficción de aventuras|Libro de Papel|Finalizado|Si|
 CatCrio|Cassandra Clare - Holly Black|La llave de bronce|Saga Magisterium (3)|Ficción de aventuras|Libro de Papel|Finalizado|No|

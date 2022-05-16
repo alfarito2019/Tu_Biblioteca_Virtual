@@ -313,50 +313,30 @@ class Opciones:
             while recorrido!=None:
                 
                 libro:estructuras.ListaEnlazada=recorrido.verDato()
-
-                if(libro.cabeza.dato==self.usuario.username):
-                    recorrido2:estructuras.Nodo =libro.cabeza.siguiente
-                    while recorrido2!=None:
-                        datosLibro.agregar(recorrido2.verDato())
-                        
-                        recorrido2=recorrido2.siguiente
-                misLibros.agregar(datosLibro)   
-                datosLibro =estructuras.ListaEnlazada()
+                pendiente:estructuras.Nodo=libro.cabeza.siguiente.siguiente.siguiente.siguiente.siguiente.siguiente
+                if(libro.cabeza.dato==self.usuario.username and ((pendiente.verDato().lower())=="pendiente")):
+                    librosSinLeer.enqueue(libro.cabeza.siguiente.siguiente.verDato())  
                 recorrido=recorrido.siguiente
 
-            recorrido:estructuras.Nodo = misLibros.cabeza
-            misLibros.verLista()
-            while recorrido!=None:
-                
-                libro:estructuras.ListaEnlazada=recorrido.verDato()
-                librosSinLeer=estructuraCola.Cola()  
-                if(  misLibros.buscar("Pendiente")==True or misLibros.buscar("pendiente")== True):
-                    recorrido2:estructuras.Nodo =libro.cabeza
-                    while recorrido2!=None:
-                        librosSinLeer.enqueue(recorrido2.verDato())
-                        
-                        recorrido2=recorrido2.siguiente
-                    print("")
-                recorrido=recorrido.siguiente
+
+
             if librosSinLeer.colaVacia()==True:
                 print("Eres un excelente lector")
                 print("Haz leido todos tus libros")
 
             else:
-                librosSinLeer.verCola()
                 print("¿Leiste el siguiente libro de lista?")
-                print(librosSinLeer.verDequeue())
-                datos:estructuras.ListaEnlazada = librosSinLeer.verDequeue()
+                lib=librosSinLeer.verDequeue()
+                print(lib)
                 print("Si(1)  No(2)")
                 leido = int(input("\n  ")) 
                 if  leido == 1:
                     
-                    titulo:estructuras.Nodo = datos.cabeza.siguiente
-                    baseLibros.actualizarBaseleido(titulo.verDato(),leido)
+                    titulo:estructuras.Nodo = lib
+                    baseLibros.actualizarBaseleido(titulo,leido)
                     librosSinLeer.dequeue()
                     
-                    print("Exceletnte")
-                    print ("Tu siguiente libro por leer es")
+                    print("Excelente")
 
 
                 else : 
