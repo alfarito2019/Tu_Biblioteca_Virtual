@@ -1,4 +1,4 @@
-import estructuras,BaseDatos,Usuario,Menu
+import estructuras,BaseDatos,Usuario,Menu,estructuraCola
 import time
 
 
@@ -111,13 +111,10 @@ class Opciones:
                         recorrido2=recorrido2.siguiente
                     print("")
                 recorrido=recorrido.siguiente
-                final  = time.perf_counter()
-                print(final - inicio )
+                
             if not confirmacion:
                 print("Busqueda no encontrada")
-                final  = time.perf_counter()
-                print(final - inicio )
-
+                
         print("Desea volver al menu o salir del programa? ")
         print("1. Volver ")
         print("2. Salir ")
@@ -282,7 +279,6 @@ class Opciones:
     def actualizarLibro(self):  
         titulo=input("Que libro desea actualizar? ")
         estado=input("El libro está prestado? (1)Si, (2)No: ")
-        inicio = time.perf_counter()
         if estado == "1":
             estado = "si"
         elif estado == "2":
@@ -293,8 +289,7 @@ class Opciones:
                 estado=input("El libro está prestado? (1)Si, (2)No: ")
         baseLibros=BaseDatos.BD(self.usuario)
         baseLibros.actualizarBaseLibro(titulo,estado)
-        final  = time.perf_counter()
-        print(final - inicio )
+       
         print("Desea volver al menu o salir del programa? ")
         print("1. Volver ")
         print("2. Salir ")
@@ -306,7 +301,83 @@ class Opciones:
                 menu.mostrarMenu()
         elif desicion=="2":
             print("hasta pronto "+self.usuario.username)
-        
+
+    def librosPorLeer(self):
+            baseLibros=BaseDatos.BD(self.usuario)
+            baseLibros.descargarLibros()
+            listaLibros= baseLibros.getLibros()
+            recorrido:estructuras.Nodo =listaLibros.cabeza 
+            misLibros=estructuras.ListaEnlazada()
+            librosSinLeer=estructuraCola.Cola()  
+            datosLibro =estructuras.ListaEnlazada()
+            while recorrido!=None:
+                
+                libro:estructuras.ListaEnlazada=recorrido.verDato()
+
+                if(libro.cabeza.dato==self.usuario.username):
+                    recorrido2:estructuras.Nodo =libro.cabeza.siguiente
+                    while recorrido2!=None:
+                        datosLibro.agregar(recorrido2.verDato())
+                        
+                        recorrido2=recorrido2.siguiente
+                misLibros.agregar(datosLibro)   
+                datosLibro =estructuras.ListaEnlazada()
+                recorrido=recorrido.siguiente
+
+            recorrido:estructuras.Nodo = misLibros.cabeza
+            misLibros.verLista()
+            while recorrido!=None:
+                
+                libro:estructuras.ListaEnlazada=recorrido.verDato()
+                librosSinLeer=estructuraCola.Cola()  
+                if(  misLibros.buscar("Pendiente")==True or misLibros.buscar("pendiente")== True):
+                    recorrido2:estructuras.Nodo =libro.cabeza
+                    while recorrido2!=None:
+                        librosSinLeer.enqueue(recorrido2.verDato())
+                        
+                        recorrido2=recorrido2.siguiente
+                    print("")
+                recorrido=recorrido.siguiente
+            if librosSinLeer.colaVacia()==True:
+                print("Eres un excelente lector")
+                print("Haz leido todos tus libros")
+
+            else:
+                librosSinLeer.verCola()
+                print("¿Leiste el siguiente libro de lista?")
+                print(librosSinLeer.verDequeue())
+                datos:estructuras.ListaEnlazada = librosSinLeer.verDequeue()
+                print("Si(1)  No(2)")
+                leido = int(input("\n  ")) 
+                if  leido == 1:
+                    
+                    titulo:estructuras.Nodo = datos.cabeza.siguiente
+                    baseLibros.actualizarBaseleido(titulo.verDato(),leido)
+                    librosSinLeer.dequeue()
+                    
+                    print("Exceletnte")
+                    print ("Tu siguiente libro por leer es")
+
+
+                else : 
+                    print ("¿Que esperas para leerlo?")    
+
+
+            print("Desea volver al menu o salir del programa? ")
+            print("1. Volver ")
+            print("2. Salir ")
+            desicion=input().strip()
+            if desicion=="1":
+                anterior=Menu.display.pop()
+                if anterior == "menu":
+                    menu=Menu.Menu(self.usuario)
+                    menu.mostrarMenu()
+            elif desicion=="2":
+                print("hasta pronto "+self.usuario.username)
+
+
+
+
         
 
     def eliminarUsuario(self):

@@ -38,10 +38,10 @@ class BD():
 
     def borrarUsuario(self):
         # Borrar libros del usuario
-        fr = open('DatosPrueba/PruebaLibros1millon.txt',mode='r', encoding='utf8')
+        fr = open('DatosPrueba/Libros.txt',mode='r', encoding='utf8')
         lineas = fr.readlines()
         fr.close()
-        f = open('DatosPrueba/PruebaLibros1millon.txt',mode='w', encoding='utf8')
+        f = open('DatosPrueba/Libros.txt',mode='w', encoding='utf8')
         for linea in lineas:
             infoLibro = estructuras.split(linea)
             if infoLibro.cabeza.verDato() != self.usuario.nombreUsuario():
@@ -97,10 +97,10 @@ class BD():
 
     def actualizarBaseLibro(self,titulo,estado):
         libroEncontrado = False
-        fr = open('DatosPrueba/PruebaLibros1millon.txt',mode='r', encoding='utf8')
+        fr = open('DatosPrueba/Libros.txt',mode='r', encoding='utf8')
         lineas = fr.readlines()
         fr.close()
-        f = open('DatosPrueba/PruebaLibros1millon.txt',mode='w', encoding='utf8')
+        f = open('DatosPrueba/Libros.txt',mode='w', encoding='utf8')
         for linea in lineas:
             infoLibro = estructuras.split(linea)
             tituloActual:str = infoLibro.cabeza.traerSiguiente().traerSiguiente().verDato()
@@ -128,12 +128,45 @@ class BD():
         else:
             print("El libro '"+titulo+"'no esta en tu colección")
 
-    def borrarLibro(self,libroBorrado):
+    def actualizarBaseleido(self,titulo,estado):
         libroEncontrado = False
-        fr = open('DatosPrueba/PruebaLibros1millon.txt',mode='r', encoding='utf8')
+        fr = open('DatosPrueba/Libros.txt',mode='r', encoding='utf8')
         lineas = fr.readlines()
         fr.close()
-        f = open('DatosPrueba/PruebaLibros1millon.txt',mode='w', encoding='utf8')
+        f = open('DatosPrueba/Libros.txt',mode='w', encoding='utf8')
+        for linea in lineas:
+            infoLibro = estructuras.split(linea)
+            tituloActual:str = infoLibro.cabeza.traerSiguiente().traerSiguiente().verDato()
+            if infoLibro.cabeza.verDato() != self.usuario.nombreUsuario() or titulo != tituloActual: 
+                f.write(linea)
+            else:
+                recorrido:estructuras.Nodo= infoLibro.cabeza
+                escrito=""
+                if estado==1:
+                    estado="finalizado"
+                while(recorrido!=None):
+                    if recorrido.verDato()=="pendiente" or  recorrido.verDato()=="Pendiente" :
+                        escrito+=estado+"|"
+                    else:
+                        escrito+=recorrido.verDato()+"|"
+                    recorrido=recorrido.siguiente
+                if recorrido==infoLibro.cola:
+                    escrito += "\n"
+                libroEncontrado = True
+                f.write(escrito)
+                
+        f.close()
+        if libroEncontrado:
+            print("El estado del libro '"+titulo+"'se actualizó")
+        else:
+            print("El libro '"+titulo+"'no esta en tu colección")
+
+    def borrarLibro(self,libroBorrado):
+        libroEncontrado = False
+        fr = open('DatosPrueba/Libros.txt',mode='r', encoding='utf8')
+        lineas = fr.readlines()
+        fr.close()
+        f = open('DatosPrueba/Libros.txt',mode='w', encoding='utf8')
         for linea in lineas:
             infoLibro = estructuras.split(linea)
             titulo:str = infoLibro.cabeza.traerSiguiente().traerSiguiente().verDato()
@@ -150,3 +183,4 @@ class BD():
         else:
             print("-- Lo sentimos, el libro '"+libroBorrado+"' no se encontró en tu colección --")
     
+ 

@@ -22,7 +22,8 @@ class Menu:
                 2. Agregar un libro
                 3. Eliminar un libro
                 4. Actualizar estado libro
-                5. Salir.
+                5. Mis libros por leer
+                6. Salir.
                 0. Eliminar usuario y salir
                 ''')
         desicion=int(input().strip())
@@ -40,10 +41,13 @@ class Menu:
             opciones.actualizarLibro()
             display.push(4)
         elif desicion == 5:
-            self.usuario.salirSesion()
+            opciones.librosPorLeer()
             display.push(5)
-            print("Hasta la proxima :) "+ self.usuario.username)
         elif desicion == 6:
+            self.usuario.salirSesion()
+            display.push(6)
+            print("Hasta la proxima :) "+ self.usuario.username)
+        elif desicion == 7:
             self.usuario.salirSesion()
             print("Hasta la proxima :) "+ self.usuario.username)
         elif desicion == 0:

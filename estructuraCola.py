@@ -37,3 +37,9 @@ class Cola:
     # Imprime la cola
     def verCola(self):
         print(self.cola)
+
+    #Mostrar el dato que se desencolaria  
+    def verDequeue(self):
+        if self.colaVacia():
+            return False
+        return  self.cola(0)
