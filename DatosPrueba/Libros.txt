@@ -23,8 +23,7 @@ CatCrio|Cassandra Clare - Holly Black|La torre de oro|Saga Magisterium (5)|Ficci
 CatCrio|Christopher Paolini|Eragon|Saga The Inheritance Cycle (1)|Fantasía|Libro de Papel|Finalizado|No|
 CatCrio|Christopher Paolini|Eldest|Saga The Inheritance Cycle (2)|Fantasía|Libro de Papel|Finalizado|No|
 CatCrio|Christopher Paolini|Brisingr|Saga The Inheritance Cycle (3)|Fantasía|Libro de Papel|Finalizado|No|
-CatCrio|Christopher Paolini|Legado|Saga The Inheritance Cycle (4)|Fantasía|Libro de Papel|Pendiente|No|
-CatCrio|Claudia Ramírez|El principe del sol|Trilogía El principe del sol (1)|Fantasía|Libro electrónico|Finalizado|No|
+CatCrio|Christopher Paolini|Legado|Saga The Inheritance Cycle (4)|Fantasía|Libro de Papel|finalizado|No|CatCrio|Claudia Ramírez|El principe del sol|Trilogía El principe del sol (1)|Fantasía|Libro electrónico|Finalizado|No|
 CatCrio|Claudia Ramírez|La ladrona de la luna|Trilogía El principe del sol (2)|Fantasía|Libro de Papel|Finalizado|No|
 CatCrio|Cornelia Funke|Corazón de tinta|Trilogia Mundos de tinta (1)|Fantasía|Libro de Papel|Finalizado|No|
 CatCrio|Cornelia Funke|Inkdeath|Trilogia Mundos de tinta (3)|Fantasía	Libro de Papel|Pendiente|No|

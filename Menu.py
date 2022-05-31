@@ -47,9 +47,6 @@ class Menu:
             self.usuario.salirSesion()
             display.push(6)
             print("Hasta la proxima :) "+ self.usuario.username)
-        elif desicion == 7:
-            self.usuario.salirSesion()
-            print("Hasta la proxima :) "+ self.usuario.username)
         elif desicion == 0:
             opciones.eliminarUsuario()
         else:
