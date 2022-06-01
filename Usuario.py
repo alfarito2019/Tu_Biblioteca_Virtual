@@ -2,7 +2,8 @@ from email.mime import base
 from importlib.resources import Package
 from xmlrpc.client import Boolean
 import time
-import estructuras,BaseDatos
+import estructuras
+
 
 class usuario():
     #constructor
@@ -81,3 +82,4 @@ class usuario():
         return str(self.username)
 
 
+import BaseDatos

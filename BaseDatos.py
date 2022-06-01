@@ -2,7 +2,6 @@ import estructuras
 import Usuario
 
 class BD():
-    
     def __init__(self,usuario:Usuario.usuario):
         self.base_usuarios= estructuras.ListaEnlazada() 
         self.base_libros= estructuras.ListaEnlazada()

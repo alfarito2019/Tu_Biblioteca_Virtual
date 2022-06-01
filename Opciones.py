@@ -1,4 +1,5 @@
-import Usuario,Agregar,Mostrar,Eliminar,Actualizar,Pendientes,Buscar
+import Usuario
+import Agregar,Mostrar,Eliminar,Actualizar,Pendientes,Buscar
 
 
 class Opciones:
