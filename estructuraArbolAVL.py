@@ -1,4 +1,3 @@
-
 class Nodo:
     # Constructor
 	def __init__(self,valor=None):
@@ -40,7 +39,7 @@ class ArbolAVL:
 
 				if n.valor!=None:       
 					buf=' '*((5-len(str(n.valor)))/2)
-					fila_act+='%s%s%s'%(buf,str(n.valor),buf)+sep
+					fila_act+="{a}{b}{c}".format(a=buf,b=str(n.valor),c=buf)+sep
 				else:
 					fila_act+=' '*5+sep
 
@@ -172,10 +171,10 @@ class ArbolAVL:
 
 			if nodo_padre!=None:
                 # remueve la referencia al nodo desde el padre
-				if nodo_padre.hijo_izquierdo==Nodo:
+				if nodo_padre.hijo_izquierdo==nodo:
 					nodo_padre.hijo_izquierdo=None
 				else:
-					nodo_padre.hijo_izquierdo=None
+					nodo_padre.hijo_derecho=None
 			else:
 				self.raiz=None
 
@@ -183,14 +182,14 @@ class ArbolAVL:
 		if nodo_hijos==1:
 
 			# obtiene el nodo del hijo unico
-			if Nodo.hijo_izquierdo!=None:
-				hijo=Nodo.hijo_izquierdo
+			if nodo.hijo_izquierdo!=None:
+				hijo=nodo.hijo_izquierdo
 			else:
-				hijo=Nodo.hijo_derecho
+				hijo=nodo.hijo_derecho
 
 			if nodo_padre!=None:
                 # remplazar el nodo a borrar por su hijo
-				if nodo_padre.hijo_izquierdo==Nodo:
+				if nodo_padre.hijo_izquierdo==nodo:
 					nodo_padre.hijo_izquierdo=hijo
 				else:
 					nodo_padre.hijo_derecho=hijo
@@ -204,11 +203,11 @@ class ArbolAVL:
 		if nodo_hijos==2:
 
             # obtiene el sucesor inorden del nodo borrado
-			sucesor=nodo_menor(Nodo.hijo_derecho)
+			sucesor=nodo_menor(nodo.hijo_derecho)
 
             # copia el valor del sucesor de inorden al nodo anterior
 			# manteniendo el valor que deseamos borrar
-			Nodo.valor=sucesor.valor
+			nodo.valor=sucesor.valor
 
             # borra el sucesor de inorden tras copiarlo dentro del
             # otro nodo
@@ -355,7 +354,7 @@ class ArbolAVL:
 
 arbol = ArbolAVL()
 
-print("Iserta valores")
+print("Inserta valores")
 arbol.insertar(1)
 arbol.insertar(2)
 arbol.insertar(3)
