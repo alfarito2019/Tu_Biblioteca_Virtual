@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 import estructuras
-=======
->>>>>>> 81fd88daf4b381153ba7e4d1e24c33ce9b1530cd
 class Nodo:
     # Constructor
 	def __init__(self,valor=None):
@@ -42,15 +39,9 @@ class ArbolAVL:
 					nodos_sig.extend([None,None])
 					continue
 
-<<<<<<< HEAD
 				if n.key!=None:       
 					buf=' '*((5-len(str(n.key)))/2)
 					fila_act+="{a}{b}{c}".format(a=buf,b=str(n.key),c=buf)+sep
-=======
-				if n.valor!=None:       
-					buf=' '*((5-len(str(n.valor)))/2)
-					fila_act+="{a}{b}{c}".format(a=buf,b=str(n.valor),c=buf)+sep
->>>>>>> 81fd88daf4b381153ba7e4d1e24c33ce9b1530cd
 				else:
 					fila_act+=' '*5+sep
 
@@ -218,15 +209,9 @@ class ArbolAVL:
             # obtiene el sucesor inorden del nodo borrado
 			sucesor=nodo_menor(nodo.hijo_derecho)
 
-<<<<<<< HEAD
             # copia el key del sucesor de inorden al nodo anterior
 			# manteniendo el key que deseamos borrar
 			nodo.key=sucesor.key
-=======
-            # copia el valor del sucesor de inorden al nodo anterior
-			# manteniendo el valor que deseamos borrar
-			nodo.valor=sucesor.valor
->>>>>>> 81fd88daf4b381153ba7e4d1e24c33ce9b1530cd
 
             # borra el sucesor de inorden tras copiarlo dentro del
             # otro nodo
@@ -369,39 +354,3 @@ class ArbolAVL:
 		return nodo_act.hijo_izquierdo if izquierda>=derecha else nodo_act.hijo_derecho
 
 
-<<<<<<< HEAD
-=======
-arbol = ArbolAVL()
-
-print("Inserta valores")
-arbol.insertar(1)
-arbol.insertar(2)
-arbol.insertar(3)
-arbol.insertar(5)
-arbol.insertar(10)
-arbol.insertar(4)
-print(arbol.imp_arbol())
-
-print("borra el 10")
-arbol.borrar_valor(10)
-print(arbol.imp_arbol())
-
-print("inserta el 3 de nuevo")
-arbol.insertar(3) # se repite, no se inserta
-print(arbol.imp_arbol())
-
-print("Altura: ",arbol.altura())
-
-if arbol.encontrar(5):
-    print("Si esta!")
-else:
-    print("No esta!")
-    
-if arbol.encontrar(10):
-    print("Si esta!")
-else:
-    print("No esta!")
-    
-print("Search: ",arbol.buscar(1))
-"""
->>>>>>> 81fd88daf4b381153ba7e4d1e24c33ce9b1530cd
