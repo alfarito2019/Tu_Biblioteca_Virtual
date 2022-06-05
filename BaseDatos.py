@@ -1,10 +1,12 @@
 import estructuras
+import estructuraArbolAVL
 import Usuario
 
 class BD():
     def __init__(self,usuario:Usuario.usuario):
         self.base_usuarios= estructuras.ListaEnlazada() 
         self.base_libros= estructuras.ListaEnlazada()
+        self.base_libros_arbol = estructuraArbolAVL.ArbolAVL()
         self.usuario=usuario
         
 
@@ -81,10 +83,24 @@ class BD():
 
         f.close()
         
-        
+    def descargarLibrosArbol(self)-> None:
+        f = open ('DatosPrueba/Libros.txt', mode='r', encoding='utf-8')
+        while(True):
+            #leer la siguiente linea
+            linea = f.readline()
+            #revisar si la linea no es null
+            if not linea:
+                break
+            #terminamos de leer el archivo 
+            self.base_libros_arbol.insertar(estructuras.split(linea))
+
+        f.close()
 
     def getLibros(self)-> estructuras.ListaEnlazada:
         return self.base_libros 
+
+    def getLibrosArbol(self)-> estructuraArbolAVL.ArbolAVL:
+        return self.base_libros_arbol
 
 
     def appendLibros(self,autor,titlulo,extension,genero,formato,estadodelectura,prestado)->bool:

@@ -1,13 +1,15 @@
-import estructuras,BaseDatos,Usuario,Menu,time
+import estructuras,BaseDatos,estructuraArbolAVL,Usuario,Menu,time
 
 class Operacion1_1:
     def __init__(self,user:Usuario.usuario) -> None:
         self.usuario=user
     def buscarLibro(self)->None:
-        inicio = time.perf_counter()
+        
         baseLibros=BaseDatos.BD(self.usuario)
-        baseLibros.descargarLibros()
-        listaLibros= baseLibros.getLibros()
+        print("Aqui estamos llegando1")
+        baseLibros.descargarLibrosArbol()
+        print("Aqui estamos llegando2")
+        listaLibros= baseLibros.getLibrosArbol()
         print("¿Bajo que categoría quisiera buscar el libro?")
         print("1. Nombre libro")
         print("2. Autor")
@@ -15,41 +17,16 @@ class Operacion1_1:
         confirmacion=False
         if desicion == 1:
             nombre_dado=input("¿Que nombre de libro busca? ")
-            inicio = time.perf_counter()
+            datoslibro=listaLibros.encontrar(nombre_dado)
+            if datoslibro != None:
+                lista:estructuras.ListaEnlazada=datoslibro.valor 
+                lista.verLista()
             
-            recorrido:estructuras.Nodo =listaLibros.cabeza
-            
-            contador=0
-            while recorrido!=None:
-                
-                libro:estructuras.ListaEnlazada=recorrido.verDato()
-                usuario=libro.cabeza.verDato()
-                nombre_libro:str=libro.cabeza.siguiente.siguiente.verDato()
-                if(usuario==self.usuario.username and nombre_libro==nombre_dado.strip()):
-                    confirmacion=True
-                    contador+=1
-                    if contador==1:
-                        print("Autor| Título| Autoconclusivo/Bilogía/Trilogía/Saga| Genero| Formato(electrónico o físico)|Estado de lectura (leido/pendiente)|Prestado(Si/No)|")
-                        
-
-                    recorrido2:estructuras.Nodo =libro.cabeza.siguiente
-                    
-                    while recorrido2!=None:
-                        
-                        print(recorrido2.verDato(),end="|")
-                        recorrido2=recorrido2.siguiente
-                    print("")
-
-                recorrido=recorrido.siguiente
-                final  = time.perf_counter()
-                print(final - inicio )     
-            if not confirmacion:
-                    print("Busqueda no encontrada")
-                    final  = time.perf_counter()
-                    print(final - inicio )     
+            else:
+                print("Por ahora no posees este libro")           
+                       
         elif desicion == 2:
             autor_dado=input("¿Que autor busca? ")
-            inicio = time.perf_counter()
             recorrido:estructuras.Nodo =listaLibros.cabeza
             confirmacion=False
             contador=0

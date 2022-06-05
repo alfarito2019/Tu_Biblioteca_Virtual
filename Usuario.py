@@ -44,7 +44,6 @@ class usuario():
 
     #iniciar Sesion 
     def inicioSesion(self) ->bool:
-        inicio = time.perf_counter()
         baseUsuarios=BaseDatos.BD(self)
         baseUsuarios.descargarUsuarios()
         listaUsuarios= baseUsuarios.getUsuarios()
@@ -58,8 +57,6 @@ class usuario():
                     self.online=True
                     break
             recorrido=recorrido.siguiente
-        final  = time.perf_counter()
-        print(final - inicio )
         return confirmacion
         
 
