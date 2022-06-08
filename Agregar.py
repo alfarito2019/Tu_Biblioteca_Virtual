@@ -8,17 +8,17 @@ class Operacion2:
         autor = input("\n¿Quien es el autor? ") #libre
         titlulo = input("\n¿Cual es el titulo del libro? ") #libre
 
-        print("\n¿Pertenece a alguna familia de libros? ")
+        print("¿Pertenece a alguna familia de libros? ")
         print("De que tipo sería ")
         print("Autoconclusivo(1) ")
         print("Bilogía(2) ")
         print("Trilogía(3) ")
         print("Saga(4) ")
         print("otros(5) ")
-        extension = int(input("\nPorfavor escoja una de las anteriores: ")) #cerrada
+        extension = int(input(" porfavor escoja una de las anteriores: ")) #cerrada
 
         while (extension !=1 and extension !=2  and extension != 3 and extension != 4 and extension != 5):
-                extension =int( input(" \nporfavor escoja una de las anteriores ")) #cerrada
+                extension =int( input(" porfavor escoja una de las anteriores ")) #cerrada
         if extension == 1 :
             extension = "Autoconclusivo"
         
@@ -35,7 +35,7 @@ class Operacion2:
             extension = "otros"
         
             
-        print("\nEscoge entre las siguientes: ")
+        print("Escoge entre las siguientes: ")
         print("Libro academico(1) ")
         print("Biografía(2) ")
         print("Libro de poesia(3) ")
@@ -49,8 +49,8 @@ class Operacion2:
 
         genero = int(input("\n¿Categoría de tu libro? "))
         while(genero != 0 and genero != 1 and genero != 2 and genero != 3 and genero != 4 and genero != 5 and genero != 6 and genero != 7 and genero != 8 and genero !=9):
-            print("\nporfavor escoge una opcion valida")
-            print("\nEscoge entre las anteriores:")
+            print("porfavor escoge una opcion valida")
+            print("Escoge entre las anteriores:")
             genero = int(input("\n¿Categoría de tu libro? "))
         
         if genero == 1:
@@ -75,12 +75,12 @@ class Operacion2:
                 genero = "otros(0)"
 
             
-        print("\nEscoge entre las siguientes:")
+        print("Escoge entre las siguientes:")
         print("Libro de Papel(1) o Libro electrónico(2)")
         formato = int(input("\n¿Categoria de tu libro? ")) #escoger
         
         while(formato !=1  and formato !=2 ):
-            print("\nporfavor escoge una opcion valida")
+            print("porfavor escoge una opcion valida")
             formato = int(input("\n¿En que formato esta tu libro? ")) #escoger
         
         if formato == 1:
@@ -88,12 +88,12 @@ class Operacion2:
         if formato == 2:
             formato = "Libro electrónico"
 
-        print("\nEscoge entre las siguientes:")
+        print("Escoge entre las siguientes:")
         print("finalizado(1) o pendiente(2)")
         estadodeLectura=int(input("\n¿En que estado se encuentra tu libro? ")) #escoger
         
         while(estadodeLectura != 1 and estadodeLectura != 2 ):
-            print("\nporfavor escoge una opcion valida")
+            print("porfavor escoge una opcion valida")
             formato = int(input("\n¿En que estado se encuentra tu libro? ")) #escoger
         
         if estadodeLectura == 1:
@@ -104,7 +104,7 @@ class Operacion2:
         print("\n¿Prestaste tu libro? ")
         prestado = input("¿si o no? ") #escoger
         while (prestado != "si" and prestado!= "no" ): 
-            print ("\nescoge una opcion valida")
+            print ("escoge una opcion valida")
             prestado = input("¿si o no?") #escoger
 
         inicio = time.perf_counter() 
@@ -115,7 +115,7 @@ class Operacion2:
         final  = time.perf_counter()
         print(final - inicio )
 
-        print("\nDesea volver al menu o salir del programa? ")
+        print("Desea volver al menu o salir del programa? ")
         print("1. Volver ")
         print("2. Salir ")
         desicion=input().strip()
@@ -125,4 +125,4 @@ class Operacion2:
                 menu=Menu.Menu(self.usuario)
                 menu.mostrarMenu()
         elif desicion=="2":
-            print("\nHasta pronto "+self.usuario.username) 
+            print("hasta pronto "+self.usuario.username) 

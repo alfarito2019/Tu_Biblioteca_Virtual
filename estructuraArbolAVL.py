@@ -1,5 +1,13 @@
 import estructuras
-from NodoAVL import Nodo
+class Nodo:
+    # Constructor
+	def __init__(self,valor=None):
+		self.valor:estructuras.ListaEnlazada=valor
+		self.key=self.valor.cabeza.traerSiguiente().traerSiguiente().verDato()
+		self.hijo_izquierdo=None
+		self.hijo_derecho=None
+		self.padre=None # Apuntador al padre del nodo
+		self.altura=1 # altura del nodo (max dist. a la hoja)
 
 class ArbolAVL:
     # Constructor
@@ -125,17 +133,6 @@ class ArbolAVL:
 			return self._encontrar(key,nodo_act.hijo_izquierdo)
 		elif key>nodo_act.key and nodo_act.hijo_derecho!=None:
 			return self._encontrar(key,nodo_act.hijo_derecho)
-
-	# Retorna 0 si el nodo esta vació o su alura definida de otra forma
-	def obtener_altura(self,nodo_act):
-		if nodo_act==None: return 0
-		return nodo_act.altura
-
-    # Retorna el nodo que sea mayor a su hermano (siendo el nodo dado el padre)
-	def hijo_mayor(self,nodo_act):
-		izquierda=self.obtener_altura(nodo_act.hijo_izquierdo)
-		derecha=self.obtener_altura(nodo_act.hijo_derecho)
-		return nodo_act.hijo_izquierdo if izquierda>=derecha else nodo_act.hijo_derecho
     
     # Llama a borrar_nodo() con la ubicación del nodo que contiene el dato a borrar (si lo encuentra)
 	def borrar_key(self,key):
@@ -163,14 +160,15 @@ class ArbolAVL:
 			if n.hijo_derecho!=None: num_hijos+=1
 			return num_hijos
 
-
-		#  --- Casos a la hora de borrar nodos ---
-
 		# Obtiene el padre del nodo a eliminar
 		nodo_padre=nodo.padre
 
 		# Obtiene el número de hijos del nodo a eliminar
 		nodo_hijos=num_hijos(nodo)
+
+
+        # Detiene (break) operaciones en diferentes casos según
+        # la estructura del árbol y nodos creados/eliminados.
 
 		# CASO 1 (El nodo NO tiene hijos)
 		if nodo_hijos==0:
@@ -249,9 +247,13 @@ class ArbolAVL:
 			return self._buscar(key,nodo_act.hijo_derecho)
 		return False 
 
+
 	# Funciones para el árbol AVL llamadas al:
 	# reordenar (rotar y rebalancear)
 	# inspeccionar (adición o eliminación)
+    # necesitar obtener la altura de un nodo dado
+    # necesitar saber el hijo de mayor altura de un nodo
+
 
 	def _inspec_insercion(self,nodo_act,path=[]):
 		if nodo_act.padre==None: return
@@ -339,3 +341,16 @@ class ArbolAVL:
 			self.obtener_altura(z.hijo_derecho))
 		y.altura=1+max(self.obtener_altura(y.hijo_izquierdo),
 			self.obtener_altura(y.hijo_derecho))
+
+    # Retorna 0 si el nodo esta vació o su alura definida de otra forma
+	def obtener_altura(self,nodo_act):
+		if nodo_act==None: return 0
+		return nodo_act.altura
+
+    # Retorna el nodo que sea mayor a su hermano (siendo el nodo dado el padre)
+	def hijo_mayor(self,nodo_act):
+		izquierda=self.obtener_altura(nodo_act.hijo_izquierdo)
+		derecha=self.obtener_altura(nodo_act.hijo_derecho)
+		return nodo_act.hijo_izquierdo if izquierda>=derecha else nodo_act.hijo_derecho
+
+

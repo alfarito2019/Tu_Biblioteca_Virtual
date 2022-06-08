@@ -2,9 +2,16 @@ import Menu
 import estructuraPila
 #import timeort time
 import Usuario
+import login
+
 
 
 if __name__ == '__main__':
+        login.createGUI()
+        username=crearLabel.dato_cuadro
+        print(username)
+        password=login.PASSWORD
+        user1 = Usuario.usuario(username, password)
         print("Esocoja una opcion ")
         print("1.Registrarse")
         print("2.Iniciar Sesión")
@@ -13,7 +20,6 @@ if __name__ == '__main__':
                 print("Registrandose")
                 username = input("Ingrese su usuario: ")
                 password = input("Ingrese su contraseña: ")
-                user1 = Usuario.usuario(username, password)
 
                 if not user1.registro():
                         print("Ya te encuentras registrado")
@@ -36,4 +42,3 @@ if __name__ == '__main__':
 
                 else:
                         print("Usuario o contraseña incorrecta")
-
