@@ -1,9 +1,18 @@
 from tkinter import *
 from tkinter import ttk as ttk
 
-def createGUI():
-    root=Tk()
-    root.title("Books 4 Dummies")
+from setuptools import Command
+import Usuario
+
+variable=0
+varUser=False
+varPass=False
+
+root=Tk()
+root.title("Books 4 Dummies")
+
+def createIntLogin():
+
 
             #mainFrame
     mainFrame=Frame()
@@ -21,17 +30,30 @@ def createGUI():
     userVariable=StringVar()
     userEntry=Entry(mainFrame,textvariable=userVariable)
     userEntry.grid(column=1,row=2)
+    global varUser
+    varUser=userEntry.get()
         #entrada password
     passLabel=Label(mainFrame,text="Contraseña",font=("Arial",14))
     passLabel.grid(column=0,row=3,padx=5,pady=5,columnspan=1)
     passVariable=StringVar()
     passEntry=Entry(mainFrame,textvariable=passVariable,show="*")
     passEntry.grid(column=1,row=3)
+    global varPass
+    varPass=passEntry.get()
         #boton log In
-    logInButton=ttk.Button(mainFrame,text="Log In")
+    logInButton=ttk.Button(mainFrame,text="Log In",command=logInstarter)
     logInButton.grid(column=0,row=4,ipadx=10,ipady=10,padx=10,pady=10)
         #boton Sign In
-    signInButton=ttk.Button(mainFrame,text="Sign In")
+    signInButton=ttk.Button(mainFrame,text="Sign In",command=SignUpStarter)
     signInButton.grid(column=1,row=4,ipadx=10,ipady=10,padx=10,pady=10)
 
     root.mainloop()
+
+def logInstarter():
+    global variable
+    variable=2
+
+def SignUpStarter():
+    global variable
+    variable=1
+
