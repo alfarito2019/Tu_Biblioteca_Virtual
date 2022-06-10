@@ -69,7 +69,7 @@ def SignUpStarter():
     username = getUser()
     global password
     password = getPass()
-    if username and password != FALSE:
+    if username != "" and password != "":
             user1 = Usuario.usuario(username, password)
 
     if not user1.registro():

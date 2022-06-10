@@ -4,9 +4,6 @@ class Operacion1_1:
     def __init__(self,user:Usuario.usuario) -> None:
         self.usuario=user
     def buscarLibro(self)->None:
-        
-        
-
         listaLibros= Menu.baseLibros.getLibrosArbol()
         print("¿Bajo que categoría quisiera buscar el libro?")
         print("1. Nombre libro")

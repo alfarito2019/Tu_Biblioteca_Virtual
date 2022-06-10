@@ -3,7 +3,6 @@ from tkinter import CENTER, ttk
 from turtle import width
 import Opciones
 import IntLogin
-import Usuario
 import Menu,estructuras
 
 class Mostrar:

@@ -15,6 +15,7 @@ class Menu:
         global baseLibros
         baseLibros=BaseDatos.BD(self.usuario)
         baseLibros.descargarLibros()
+        baseLibros.descargarLibrosArbol()
     def mostrarMenu(self)->None:
         IntMenu.createIntMenu()
         if False:
