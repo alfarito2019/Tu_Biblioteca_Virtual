@@ -5,11 +5,9 @@ class Operacion1_1:
         self.usuario=user
     def buscarLibro(self)->None:
         
-        baseLibros=BaseDatos.BD(self.usuario)
-        print("Aqui estamos llegando1")
-        baseLibros.descargarLibrosArbol()
-        print("Aqui estamos llegando2")
-        listaLibros= baseLibros.getLibrosArbol()
+        
+
+        listaLibros= Menu.baseLibros.getLibrosArbol()
         print("¿Bajo que categoría quisiera buscar el libro?")
         print("1. Nombre libro")
         print("2. Autor")

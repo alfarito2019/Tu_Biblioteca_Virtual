@@ -8,7 +8,10 @@ from tkinter import messagebox
 
 
 if __name__ == '__main__':
-        IntLogin.createIntLogin()
+        
+        IntLogin.LabelLogin.createIntLogin()
+'''
+
         if IntLogin.variable==1: #escogio registrarse
                 username = IntLogin.varUser
                 password = IntLogin.varPass
@@ -41,4 +44,4 @@ if __name__ == '__main__':
 
                 else:
                         print("Usuario o contraseña incorrecta")
-
+'''

@@ -4,9 +4,8 @@ class Operacion1:
     def __init__(self,user:Usuario.usuario) -> None:
         self.usuario=user
     def mostrarLibros(self)->None:
-        baseLibros=BaseDatos.BD(self.usuario)
-        baseLibros.descargarLibros()
-        listaLibros= baseLibros.getLibros()
+        
+        listaLibros= Menu.baseLibros.getLibros()
         recorrido:estructuras.Nodo =listaLibros.cabeza
 
         while recorrido!=None:
