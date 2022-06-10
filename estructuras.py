@@ -61,7 +61,7 @@ class ListaEnlazada:
         while actual != None:
             cadena += "->"+"["+str(actual.verDato())+"]"
             actual = actual.traerSiguiente()
-        print(cadena)
+        return cadena
 
     # Retorna (True) si el valor dado esta en la lista
     def buscar(self,dato):

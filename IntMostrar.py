@@ -10,10 +10,10 @@ class Mostrar:
         self.usuario=IntLogin.user1
     def createIntMostrar(self):
                 #mainFrame
-        
+        global root
         root=tk.Tk()
         root.title("Libros encontrados")  
-        titulo=tk.Label(root,text="Books 4 Dummies",font=("Arial",24))
+        titulo=tk.Label(root,text="Buscar",font=("Arial",24))
         titulo.pack(side=tk.TOP)
         scrollbar=tk.Scrollbar(root)
         c=tk.Canvas(root,yscrollcommand=scrollbar.set,width=560)
@@ -74,5 +74,6 @@ class Mostrar:
         c.config(scrollregion=c.bbox("all"))
         root.mainloop
 def buscar():
+    root.destroy()
     opcion=Opciones.Opciones(IntLogin.user1)
     opcion.buscarLibro()
