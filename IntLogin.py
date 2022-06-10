@@ -62,7 +62,8 @@ def logInstarter():
         
 
     else:
-        print("Usuario o contraseña incorrecta")
+        messagebox.showinfo(message="Usuario o contraseña incorrecta", title="advertencia")
+        
 
 def SignUpStarter():
     global username
@@ -73,11 +74,10 @@ def SignUpStarter():
             user1 = Usuario.usuario(username, password)
 
     if not user1.registro():
-            response=messagebox.showinfo(message="Ya te encuentras registrado", title="advertencia")
-            print(response)
+            messagebox.showinfo(message="Ya te encuentras registrado", title="advertencia")
+
     else:
-            response=messagebox.showinfo(message="Se registro satisfactoriamente", title="advertencia")
-            print(response)
+            messagebox.showinfo(message="Se registro satisfactoriamente", title="advertencia")
             # print("Se registro satisfactoriamente")
             # user1.online=True
             # menu=Menu.Menu(user1)
