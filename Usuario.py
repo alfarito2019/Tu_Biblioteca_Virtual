@@ -3,7 +3,7 @@ from importlib.resources import Package
 from xmlrpc.client import Boolean
 import time
 import estructuras
-
+import NodoAVLUsuario, estructuraArbolAVLUsuario
 
 class usuario():
     #constructor
@@ -17,61 +17,39 @@ class usuario():
     #Registrarse
 
     def registro(self)->bool:
-        inicio = time.perf_counter()
-        baseUsuarios=BaseDatos.BD(self)
-        baseUsuarios.descargarUsuarios()
-        listaUsuarios= baseUsuarios.getUsuarios()
-        confirmacion=True
-        recorrido:estructuras.Nodo =listaUsuarios.cabeza
-        while recorrido!=None:
-            minilista:estructuras.ListaEnlazada=recorrido.verDato()
-            
-            if minilista.cabeza.verDato()==self.username:
-                confirmacion=False
-                break
-            recorrido=recorrido.siguiente
 
-                
-        if(confirmacion):
+        baseUsuarios=BaseDatos.BD(self)
+        baseUsuarios.descargarUsuariosArbol()
+        listaUsuarios= baseUsuarios.getUsuariosArbol()
+        if listaUsuarios.buscar(self.username) == False:
             baseUsuarios.appendUsuarios(self.username,self.password)
-            final  = time.perf_counter()
-            print(final - inicio )
             return True
-            
+        
         else:
             return False
-
-
+            
     #iniciar Sesion 
     def inicioSesion(self) ->bool:
         baseUsuarios=BaseDatos.BD(self)
-        baseUsuarios.descargarUsuarios()
-        listaUsuarios= baseUsuarios.getUsuarios()
-        confirmacion=False
-        recorrido:estructuras.Nodo =listaUsuarios.cabeza
-        while recorrido!=None:
-            minilista:estructuras.ListaEnlazada=recorrido.verDato()
-            if minilista.cabeza.verDato()==self.username and minilista.cabeza.verDato() != None:
-                if minilista.cola.verDato()==self.password:
-                    confirmacion=True
-                    self.online=True
-                    break
-            recorrido=recorrido.siguiente
-        return confirmacion
-        
+        baseUsuarios.descargarUsuariosArbol()
+        listaUsuarios= baseUsuarios.getUsuariosArbol()
+        datos:NodoAVLUsuario.Nodo =  listaUsuarios.encontrar(self.username)
+        if  datos !=  None: 
+            if  datos.valor.cabeza.traerSiguiente().verDato() == self.password:
+                self.online = True
+                return self.online
+        else:
+            return self.online
+
+
 
 
     def salirSesion(self)->bool:
-        inicio = time.perf_counter()
         if self.online:
             self.online = False
-            final  = time.perf_counter()
-            print(final - inicio )
             return True
             
         else:
-            final  = time.perf_counter()
-            print(final - inicio )
             return False
             
     

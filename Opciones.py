@@ -37,3 +37,6 @@ class Opciones:
     def eliminarUsuario(self):
         eliminar=Eliminar.Operacion0(self.usuario)
         eliminar.eliminarUsuario()
+    def salir(self):
+        self.usuario.salirSesion()
+        print("Hasta la proxima :) "+ self.usuario.username)

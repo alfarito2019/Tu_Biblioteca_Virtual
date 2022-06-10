@@ -1,12 +1,14 @@
 import estructuras
-import estructuraArbolAVL
+import estructuraArbolAVLLibro
 import Usuario
+import estructuraArbolAVLUsuario
 
 class BD():
     def __init__(self,usuario:Usuario.usuario):
         self.base_usuarios= estructuras.ListaEnlazada() 
+        self.base_usuarios_arbol = estructuraArbolAVLUsuario.ArbolAVL()
         self.base_libros= estructuras.ListaEnlazada()
-        self.base_libros_arbol = estructuraArbolAVL.ArbolAVL()
+        self.base_libros_arbol = estructuraArbolAVLLibro.ArbolAVL()
         self.usuario=usuario
         
 
@@ -22,52 +24,65 @@ class BD():
             self.base_usuarios.agregar(estructuras.split(linea))
 
         f.close()
-        
+
+    def descargarUsuariosArbol(self)-> None:
+        f = open ('DatosPrueba/Usuarios.txt', mode='r', encoding='utf-8')
+        while(True):
+            #leer la siguiente linea
+            linea = f.readline()
+            #revisar si la linea no es null
+            if not linea:
+                break
+            #terminamos de leer el archivo 
+            self.base_usuarios_arbol.insertar(estructuras.split(linea))
+
+        f.close()     
         
     def cargarUsuarios(self,username,password)-> bool:    
         f = open ('DatosPrueba/Usuarios.txt',mode='w', encoding='utf8')
         f.write(username,password)        
         f.close()
 
-    def getUsuarios(self)-> estructuras.ListaEnlazada:
-        return self.base_usuarios
+    # def getUsuarios(self)-> estructuras.ListaEnlazada:
+    #     return self.base_usuarios
+
+    def getUsuariosArbol(self)-> estructuraArbolAVLUsuario.ArbolAVL:
+        return self.base_usuarios_arbol
 
     def appendUsuarios(self, username, password)->bool:
         f = open ('DatosPrueba/Usuarios.txt',mode='a', encoding='utf8')
         f.write(username+"|"+password+"|\n")
         f.close()
 
-    def borrarUsuario(self):
-        # Borrar libros del usuario
-        fr = open('DatosPrueba/Libros.txt',mode='r', encoding='utf8')
-        lineas = fr.readlines()
-        fr.close()
-        f = open('DatosPrueba/Libros.txt',mode='w', encoding='utf8')
-        for linea in lineas:
-            infoLibro = estructuras.split(linea)
-            if infoLibro.cabeza.verDato() != self.usuario.nombreUsuario():
-                f.write(linea)        
-        f.close()
+    # def borrarUsuario(self):
+    #     # Borrar libros del usuario
+    #     fr = open('DatosPrueba/Libros.txt',mode='r', encoding='utf8')
+    #     lineas = fr.readlines()
+    #     fr.close()
+    #     f = open('DatosPrueba/Libros.txt',mode='w', encoding='utf8')
+    #     for linea in lineas:
+    #         infoLibro = estructuras.split(linea)
+    #         if infoLibro.cabeza.verDato() != self.usuario.nombreUsuario():
+    #             f.write(linea)        
+    #     f.close()
 
-        # Borrar usuario
-        usuarioEncontrado = False
-        fr = open('DatosPrueba/Usuarios.txt',mode='r', encoding='utf8')
-        lineas = fr.readlines()
-        fr.close()
-        f = open('DatosPrueba/Usuarios.txt',mode='w', encoding='utf8')
-        for linea in lineas:
-            infoUsuarios = estructuras.split(linea)
-            if infoUsuarios.cabeza.verDato() != self.usuario.nombreUsuario():
-                f.write(linea)
-            else:
-                usuarioEncontrado = True
-        f.close()
-
-        if usuarioEncontrado:
-            print("\n-- Tu usuario se ha eliminado exitosamente! --")
-        else:
-            print("-- Lo sentimos, ocurrió un problema con la eliminación de tu usuario --")
-        
+    #     # Borrar usuario
+    #     usuarioEncontrado = False
+    #     fr = open('DatosPrueba/Usuarios.txt',mode='r', encoding='utf8')
+    #     lineas = fr.readlines()
+    #     fr.close()
+    #     f = open('DatosPrueba/Usuarios.txt',mode='w', encoding='utf8')
+    #     for linea in lineas:
+    #         infoUsuarios = estructuras.split(linea)
+    #         if infoUsuarios.cabeza.verDato() != self.usuario.nombreUsuario():
+    #             f.write(linea)
+    #         else:
+    #             usuarioEncontrado = True
+    #     f.close()
+    #     if usuarioEncontrado:
+    #         print("\n-- Tu usuario se ha eliminado exitosamente! --")
+    #     else:
+    #         print("-- Lo sentimos, ocurrió un problema con la eliminación de tu usuario --")       
 
     def descargarLibros(self)-> None:
         
@@ -99,7 +114,7 @@ class BD():
     def getLibros(self)-> estructuras.ListaEnlazada:
         return self.base_libros 
 
-    def getLibrosArbol(self)-> estructuraArbolAVL.ArbolAVL:
+    def getLibrosArbol(self)-> estructuraArbolAVLLibro.ArbolAVL:
         return self.base_libros_arbol
 
 
