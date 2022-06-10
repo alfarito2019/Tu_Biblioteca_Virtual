@@ -5,19 +5,18 @@ import estructuraPila
 import Usuario
 import IntLogin
 from tkinter import messagebox
+import IntBoton
 
 
 if __name__ == '__main__':
         IntLogin.createIntLogin()
-        if IntLogin.variable==1: #escogio registrarse
+        if IntBoton.variable==1: #escogio registrarse
                 username = IntLogin.varUser
                 password = IntLogin.varPass
-                if username and password != FALSE:
-                        user1 = Usuario.usuario(username, password)
+                user1 = Usuario.usuario(username, password)
 
                 if not user1.registro():
-                        response=messagebox.showinfo(message="Ya te encuentras registrado", title="advertencia")
-                        print(response)
+                        response=messagebox.showerror(message="Ya te encuentras registrado", title="advertencia")
                 else:
                         response=messagebox.showinfo(message="Se registro satisfactoriamente", title="advertencia")
                         print(response)
@@ -26,7 +25,7 @@ if __name__ == '__main__':
                         # menu=Menu.Menu(user1)
                         # menu.mostrarMenu()
                 
-        else: #Escogió iniciar sesion
+        elif IntBoton.variable==2: #Escogió iniciar sesion
                 username = IntLogin.varUser
                 password = IntLogin.varPass  
                 user1 = Usuario.usuario(username, password)            
@@ -37,7 +36,7 @@ if __name__ == '__main__':
                         
                         menu=Menu.Menu(user1)
                         menu.mostrarMenu()
-                        IntLogin.root.destroy()
+                        # IntLogin.root.destroy()
 
                 else:
                         print("Usuario o contraseña incorrecta")
