@@ -47,10 +47,9 @@ class LabelLogin():
         root.mainloop()
 
 def logInstarter():
-    global username
     username = getUser()
-    global password
     password = getPass()
+    global user1
     user1 = Usuario.usuario(username, password)            
     inicio=user1.inicioSesion()
     if inicio:
