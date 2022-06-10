@@ -1,6 +1,7 @@
 import Opciones as op
 import estructuraPila
 import Usuario
+import IntMenu
 
 global display
 display=estructuraPila.Pila()
@@ -11,6 +12,7 @@ class Menu:
     def __init__(self,user:Usuario.usuario) -> None:
         self.usuario=user
     def mostrarMenu(self)->None:
+        IntMenu.createIntMenu()
         display.push("menu")
         print('''
                 _____________________Bienvenidx a tu biblioteca virtual!!_______________________
