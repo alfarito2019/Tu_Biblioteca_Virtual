@@ -1,9 +1,11 @@
-import BaseDatos,Usuario,Menu,time
+import BaseDatos,Usuario,Menu,time, IntEliminar
 
 class Operacion3:
     def __init__(self,user:Usuario.usuario) -> None:
         self.usuario=user
     def eliminarLibro(self):
+        eliminar=IntEliminar.Eliminar()
+        eliminar.createIntEliminar()
         libroBorrado = input("Digita el nombre del libro que deseas borrar: \n")
         inicio = time.perf_counter()
         baseLibros=BaseDatos.BD(self.usuario)

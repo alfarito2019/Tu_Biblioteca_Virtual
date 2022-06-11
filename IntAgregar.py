@@ -5,7 +5,7 @@ from turtle import width
 import Opciones
 import IntLogin
 from tkinter import messagebox
-import Menu,estructuras,IntMostrar
+import Menu,estructuras,IntMostrar, Usuario, BaseDatos
 
 class Agregar:
     def __init__(self) -> None:
@@ -83,12 +83,13 @@ class Agregar:
         prestOpt.config(width=70, font=('Arial', 14))
         prestOpt.grid(column=1,row=7,padx=5,pady=5,columnspan=2)
                 #boton volver
-        logInButton=ttk.Button(root,text="volver")#,command=volverBoton)
+        logInButton=ttk.Button(root,text="volver",command=volverBoton)
         logInButton.grid(column=0,row=8,ipadx=10,ipady=10,padx=10,pady=10)
             #boton Sign In
-        signInButton=ttk.Button(root,text="Sign In")#,command=guardarBoton)
+        signInButton=ttk.Button(root,text="Guardar",command=guardarBoton)
         signInButton.grid(column=1,row=8,ipadx=10,ipady=10,padx=10,pady=10)
-        
+
+
 def getAutorEntry():
     return autorEntry.get()
 
@@ -101,8 +102,51 @@ def getSagaOpt():
 def getTemaOpt():
     return temaVariable.get()
 
+def getfisDigOpt():
+    return fisDigVariable.get()
+
 def getFinPenOpt():
     return finPenVariable.get()
 
 def getPrestOpt():
     return prestVariable.get()
+
+def volverBoton():
+    res = messagebox.askquestion('confirmación', '¿Quieres volver al menu principal?')
+#     print(res)
+    if res == 'yes':
+        usuario=IntLogin.user1           
+        menu=Menu.Menu(usuario)
+        root.destroy()
+        menu.mostrarMenu()
+    elif res == 'no':
+        return
+
+def guardarBoton():
+    res = messagebox.askquestion('Confirmación', '¿Quieres guardar el libro?')
+#     print(res)
+    if res == 'yes':
+        autor=getAutorEntry()
+        titlulo=getTitLibroEntryOpt()
+        extension=getSagaOpt()
+        genero=getTemaOpt()
+        formato=getfisDigOpt()
+        estadodeLectura=getFinPenOpt()
+        prestado=getPrestOpt()
+        
+        usuario=IntLogin.user1  
+        baseLibros=BaseDatos.BD(usuario)
+        baseLibros.appendLibros(autor,titlulo,extension,genero,formato,estadodeLectura,prestado)
+        res2=messagebox.askquestion('Confirmación', '¡En hora buena! \n Has guardado un libro \n ¿Quieres guardar otro?')
+        if res2 == 'no':
+                usuario=IntLogin.user1           
+                menu=Menu.Menu(usuario)
+                root.destroy()
+                menu.mostrarMenu()
+        elif res2 == 'yes':
+                return
+    elif res== 'no':
+        messagebox.showwarning('Advertencia',"no se ha guardado ningún libro")
+        return
+
+
