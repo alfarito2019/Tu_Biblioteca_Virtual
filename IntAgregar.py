@@ -83,11 +83,11 @@ class Agregar:
         prestOpt.config(width=70, font=('Arial', 14))
         prestOpt.grid(column=1,row=7,padx=5,pady=5,columnspan=2)
                 #boton volver
-        logInButton=ttk.Button(root,text="volver",command=volverBoton)
-        logInButton.grid(column=0,row=8,ipadx=10,ipady=10,padx=10,pady=10)
-            #boton Sign In
-        signInButton=ttk.Button(root,text="Guardar",command=guardarBoton)
-        signInButton.grid(column=1,row=8,ipadx=10,ipady=10,padx=10,pady=10)
+        volverButton=ttk.Button(root,text="volver",command=volverBoton)
+        volverButton.grid(column=0,row=8,ipadx=10,ipady=10,padx=10,pady=10)
+            #boton guardar
+        gurdarButton=ttk.Button(root,text="Guardar",command=guardarBoton)
+        gurdarButton.grid(column=1,row=8,ipadx=10,ipady=10,padx=10,pady=10)
 
 
 def getAutorEntry():

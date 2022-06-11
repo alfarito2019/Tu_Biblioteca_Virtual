@@ -117,14 +117,14 @@ class Operacion2:
         # final  = time.perf_counter()
         # print(final - inicio )
 
-        print("\nDesea volver al menu o salir del programa? ")
-        print("1. Volver ")
-        print("2. Salir ")
-        desicion=input().strip()
-        if desicion=="1":
-            anterior=Menu.display.pop()
-            if anterior == "menu":
-                menu=Menu.Menu(self.usuario)
-                menu.mostrarMenu()
-        elif desicion=="2":
-            print("\nHasta pronto "+self.usuario.username) 
+        # print("\nDesea volver al menu o salir del programa? ")
+        # print("1. Volver ")
+        # print("2. Salir ")
+        # desicion=input().strip()
+        # if desicion=="1":
+        #     anterior=Menu.display.pop()
+        #     if anterior == "menu":
+        #         menu=Menu.Menu(self.usuario)
+        #         menu.mostrarMenu()
+        # elif desicion=="2":
+        #     print("\nHasta pronto "+self.usuario.username) 
