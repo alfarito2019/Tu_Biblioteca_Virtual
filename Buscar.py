@@ -16,6 +16,7 @@ class Operacion1_1:
             if desicion == 1:
                 nombre_dado=input("¿Que nombre de libro busca? ")
                 datoslibro=listaLibros.encontrar(nombre_dado)
+
                 if datoslibro != None:
                     lista:estructuras.ListaEnlazada=datoslibro.valor 
                     lista.verLista()

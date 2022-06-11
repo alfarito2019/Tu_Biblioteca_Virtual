@@ -4,6 +4,8 @@ from turtle import width
 import Opciones
 import IntLogin
 import Menu,estructuras
+from tkinter import messagebox
+
 
 class Mostrar:
     def __init__(self) -> None:
@@ -70,6 +72,9 @@ class Mostrar:
         tablaLibros.pack()
         butBuscar=ttk.Button(mostrarFrame,text="Buscar un libro",command=buscar)
         butBuscar.pack()
+        volverButton=ttk.Button(root,text="Volver",command=volverBoton)
+        volverButton.pack()
+
         root.update()
         c.config(scrollregion=c.bbox("all"))
         root.mainloop
@@ -77,3 +82,15 @@ def buscar():
     root.destroy()
     opcion=Opciones.Opciones(IntLogin.user1)
     opcion.buscarLibro()
+
+
+def volverBoton():
+    res = messagebox.askquestion('confirmación', '¿Quieres volver al menu principal?')
+#     print(res)
+    if res == 'yes':
+        usuario=IntLogin.user1           
+        menu=Menu.Menu(usuario)
+        root.destroy()
+        menu.mostrarMenu()
+    elif res == 'no':
+        return

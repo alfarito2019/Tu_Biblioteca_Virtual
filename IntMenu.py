@@ -6,6 +6,7 @@ import Usuario
 
 
 
+
 def createIntMenu():
             #mainFrame
     global opciones
@@ -64,6 +65,8 @@ def pendientes():
 def salir():
     root.destroy()
     opciones.salir()
+    messagebox.showinfo(message="¡hasta la proxima!", title="advertencia")
+
 def el_salir():
     root.destroy()
     opciones.eliminarUsuario()
