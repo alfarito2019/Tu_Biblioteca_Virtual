@@ -4,7 +4,7 @@ from turtle import width
 import Opciones
 import IntLogin
 from tkinter import messagebox
-import Menu,estructuras,IntMostrar,IntMenu
+import Menu,estructuras,IntMostrar,IntMenu,BaseDatos
 
 class Eliminar:
     def __init__(self) -> None:
@@ -31,26 +31,34 @@ class Eliminar:
         libroEntry.pack()
         butBuscar=ttk.Button(mostrarFrame,text="Eliminar un libro",command=eliminar)
         butBuscar.pack()
-        butVolver=ttk.Button(mostrarFrame,text="Volver",command=Volver)
+        butVolver=ttk.Button(mostrarFrame,text="Volver",command=volverBoton)
         butVolver.pack()
         root.update()
         c.config(scrollregion=c.bbox("all"))
         root.mainloop
 def eliminar():
-    listaLibros= Menu.baseLibros.getLibrosArbol()
-    
-    if listaLibros.borrar_key(getTitulo())==None:
+    usuario=IntLogin.user1 
+    libroEliminar=getTitulo()
+    baseLibros=BaseDatos.BD(usuario)
+    baseLibros.borrarLibro(libroEliminar)
+    # if listaLibros.borrar_key(getTitulo())==None:
         
         
-        messagebox.showinfo(message="Por ahora no posees este libro", title="advertencia")
+    #     messagebox.showinfo(message="Por ahora no posees este libro", title="advertencia")
             
-    else:
-        messagebox.showinfo(message="Libro eliminado exitosamente", title="Libro eliminador")
+    # else:
+    messagebox.showinfo(message="Libro eliminado exitosamente", title="Libro eliminador")
 
-def Volver():
-    root.destroy()
-    menu=IntMenu.Menu()
-    menu.createIntMenu()
+def volverBoton():
+    res = messagebox.askquestion('confirmación', '¿Quieres volver al menu principal?')
+#     print(res)
+    if res == 'yes':
+        usuario=IntLogin.user1           
+        menu=Menu.Menu(usuario)
+        root.destroy()
+        menu.mostrarMenu()
+    elif res == 'no':
+        return
 
 def getTitulo():
     return libroEntry.get()
