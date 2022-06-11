@@ -3,7 +3,7 @@ from tkinter import ttk as ttk
 import Opciones
 import IntLogin
 import Usuario
-from tkinter import messagebox
+
 
 
 
@@ -66,6 +66,7 @@ def salir():
     root.destroy()
     opciones.salir()
     messagebox.showinfo(message="¡hasta la proxima!", title="advertencia")
+
 def el_salir():
     root.destroy()
     opciones.eliminarUsuario()

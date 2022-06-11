@@ -6,6 +6,7 @@ import IntLogin
 import Menu,estructuras
 from tkinter import messagebox
 
+
 class Mostrar:
     def __init__(self) -> None:
         self.usuario=IntLogin.user1
@@ -73,6 +74,7 @@ class Mostrar:
         butBuscar.pack()
         volverButton=ttk.Button(root,text="Volver",command=volverBoton)
         volverButton.pack()
+
         root.update()
         c.config(scrollregion=c.bbox("all"))
         root.mainloop
@@ -80,6 +82,7 @@ def buscar():
     root.destroy()
     opcion=Opciones.Opciones(IntLogin.user1)
     opcion.buscarLibro()
+
 
 def volverBoton():
     res = messagebox.askquestion('confirmación', '¿Quieres volver al menu principal?')
