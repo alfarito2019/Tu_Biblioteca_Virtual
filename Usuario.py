@@ -4,6 +4,7 @@ from xmlrpc.client import Boolean
 import time
 import estructuras
 import NodoAVLUsuario, estructuraArbolAVLUsuario
+import BaseDatos
 
 class usuario():
     #constructor
@@ -17,21 +18,59 @@ class usuario():
     #Registrarse
 
     def registro(self)->bool:
-
         baseUsuarios=BaseDatos.BD(self)
-        baseUsuarios.descargarUsuariosArbol()
-        listaUsuarios= baseUsuarios.getUsuariosArbol()
-        if listaUsuarios.buscar(self.username) == False:
+        baseUsuarios.descargarUsuariosHash()
+        listaUsuarios=baseUsuarios.getUsuariosHash()
+        if listaUsuarios.buscar(self.username)==None:
             baseUsuarios.appendUsuarios(self.username,self.password)
             return True
         
         else:
             return False
-            
-    #iniciar Sesion 
+    # """
+    # def registro(self)->bool:
+    #     baseUsuarios=BaseDatos.BD(self)
+    #     baseUsuarios.descargarUsuariosHash()
+    #     listaUsuarios=baseUsuarios.getUsuariosHash()
+    #     if listaUsuarios.buscar(self.username)==False:
+    #         baseUsuarios.appendUsuarios(self.username,self.password)
+    #         return True
+        
+    #     else:
+    #         return False
+    #     """
+        # baseUsuarios=BaseDatos.BD(self)
+        # baseUsuarios.descargarUsuariosArbol()
+        # listaUsuarios= baseUsuarios.getUsuariosArbol()
+        # if listaUsuarios.buscar(self.username) == False:
+        #     baseUsuarios.appendUsuarios(self.username,self.password)
+        #     return True
+        
+        # else:
+        #     return False
+
+
+
+     #iniciar Sesion 
     def inicioSesion(self) ->bool:
         baseUsuarios=BaseDatos.BD(self)
-        baseUsuarios.descargarUsuariosArbol()
+        baseUsuarios.descargarUsuariosHash()
+        listaUsuarios=baseUsuarios.getUsuariosHash()
+        datos = listaUsuarios.buscar(self.username+"|"+self.password+"|")
+        if  datos !=  None: 
+            return self.online
+                
+        else:
+            return self.online
+    """        
+    #iniciar Sesion 
+    def inicioSesion(self) ->bool:
+        # baseUsuarios=BaseDatos.BD(self)
+        # baseUsuarios.descargarUsuariosHash()
+        # listaUsuarios=baseUsuarios.getUsuariosHash()
+        # datos:
+        baseUsuarios=BaseDatos.BD(self)
+        baseUsuarios.descargarUsuariosHash()
         listaUsuarios= baseUsuarios.getUsuariosArbol()
         datos:NodoAVLUsuario.Nodo =  listaUsuarios.encontrar(self.username)
         if  datos !=  None: 
@@ -40,7 +79,7 @@ class usuario():
                 return self.online
         else:
             return self.online
-
+        """
 
 
 
@@ -56,5 +95,3 @@ class usuario():
     def nombreUsuario(self):
         return str(self.username)
 
-
-import BaseDatos

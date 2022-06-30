@@ -100,7 +100,7 @@ def split(texto:str):
     for c in texto:
         
         if c == "|" :
-            mini_lista.agregar( currentToken)  
+            mini_lista.agregar(currentToken)  
             currentToken = ""
             c=""
         currentToken += c

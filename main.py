@@ -11,15 +11,6 @@ if __name__ == '__main__':
         
         IntLogin.LabelLogin.createIntLogin()
 
-# '''
-
-'''
-
-        if IntLogin.variable==1: #escogio registrarse
-                username = IntLogin.varUser
-                password = IntLogin.varPass
-                if username and password != FALSE:
-                        user1 = Usuario.usuario(username, password)
 
 
 #         if IntLogin.variable==1: #escogio registrarse
@@ -55,12 +46,4 @@ if __name__ == '__main__':
 
 #                 else:
 #                         print("Usuario o contraseña incorrecta")
-# '''
-                        menu=Menu.Menu(user1)
-                        menu.mostrarMenu()
-                        IntLogin.root.destroy()
-
-                else:
-                        print("Usuario o contraseña incorrecta")
-'''
 
