@@ -2,11 +2,13 @@ import estructuras
 import estructuraArbolAVLLibro
 import Usuario
 import estructuraArbolAVLUsuario
+import estructuraHash
 
 class BD():
     def __init__(self,usuario:Usuario.usuario):
         self.base_usuarios= estructuras.ListaEnlazada() 
         self.base_usuarios_arbol = estructuraArbolAVLUsuario.ArbolAVL()
+        self.base_usuarios_hash = estructuraHash.Hash()
         self.base_libros= estructuras.ListaEnlazada()
         self.base_libros_arbol = estructuraArbolAVLLibro.ArbolAVL()
         self.usuario=usuario
@@ -25,7 +27,20 @@ class BD():
 
         f.close()
 
-    def descargarUsuariosArbol(self)-> None:
+    # def descargarUsuariosArbol(self)-> None:
+    #     f = open ('DatosPrueba/Usuarios.txt', mode='r', encoding='utf-8')
+    #     while(True):
+    #         #leer la siguiente linea
+    #         linea = f.readline()
+    #         #revisar si la linea no es null
+    #         if not linea:
+    #             break
+    #         #terminamos de leer el archivo 
+    #         self.base_usuarios_arbol.insertar(estructuras.split(linea))
+
+    #     f.close()     
+
+    def descargarUsuariosHash(self)-> None:
         f = open ('DatosPrueba/Usuarios.txt', mode='r', encoding='utf-8')
         while(True):
             #leer la siguiente linea
@@ -34,7 +49,7 @@ class BD():
             if not linea:
                 break
             #terminamos de leer el archivo 
-            self.base_usuarios_arbol.insertar(estructuras.split(linea))
+            self.base_usuarios_hash.insertar(linea)
 
         f.close()     
         
@@ -49,10 +64,14 @@ class BD():
     def getUsuariosArbol(self)-> estructuraArbolAVLUsuario.ArbolAVL:
         return self.base_usuarios_arbol
 
+    def getUsuariosHash(self)-> estructuraHash.Hash:
+        return self.base_usuarios_hash
+
     def appendUsuarios(self, username, password)->bool:
         f = open ('DatosPrueba/Usuarios.txt',mode='a', encoding='utf8')
         f.write(username+"|"+password+"|\n")
         f.close()
+
 
     # def borrarUsuario(self):
     #     # Borrar libros del usuario
