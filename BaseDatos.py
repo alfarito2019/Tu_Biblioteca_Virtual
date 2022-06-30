@@ -48,7 +48,8 @@ class BD():
             #revisar si la linea no es null
             if not linea:
                 break
-            #terminamos de leer el archivo 
+            #terminamos de leer el archivo
+            
             self.base_usuarios_hash.insertar(linea)
 
         f.close()     

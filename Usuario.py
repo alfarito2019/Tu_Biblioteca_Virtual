@@ -4,7 +4,7 @@ from xmlrpc.client import Boolean
 import time
 import estructuras
 import NodoAVLUsuario, estructuraArbolAVLUsuario
-import BaseDatos
+
 
 class usuario():
     #constructor
@@ -21,7 +21,7 @@ class usuario():
         baseUsuarios=BaseDatos.BD(self)
         baseUsuarios.descargarUsuariosHash()
         listaUsuarios=baseUsuarios.getUsuariosHash()
-        if listaUsuarios.buscar(self.username)==None:
+        if listaUsuarios.buscar(self.username+"|"+self.password+"|\n")==None:
             baseUsuarios.appendUsuarios(self.username,self.password)
             return True
         
@@ -56,8 +56,9 @@ class usuario():
         baseUsuarios=BaseDatos.BD(self)
         baseUsuarios.descargarUsuariosHash()
         listaUsuarios=baseUsuarios.getUsuariosHash()
-        datos = listaUsuarios.buscar(self.username+"|"+self.password+"|")
-        if  datos !=  None: 
+        datos = listaUsuarios.buscar(self.username+"|"+self.password+"|\n")
+        if  datos !=  None:
+            self.online = True 
             return self.online
                 
         else:
@@ -95,3 +96,4 @@ class usuario():
     def nombreUsuario(self):
         return str(self.username)
 
+import BaseDatos
